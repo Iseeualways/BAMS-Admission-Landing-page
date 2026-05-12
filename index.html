@@ -1,0 +1,3938 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAMS Admission Karnataka 2026–27</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --ink: #0A0A0A;
+            --ink2: #1A1A1A;
+            --green: #1A5C3A;
+            --green-light: #2A7A50;
+            --gold: #C8A94A;
+            --cream: #F5F0E8;
+            --white: #FFFFFF;
+            --muted: #888;
+            --line: rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif !important;
+            background: var(--white);
+            color: var(--ink);
+            overflow-x: hidden;
+        }
+
+        /* FIX JUMP LINK CUTTING */
+        section {
+            scroll-margin-top: 70px;
+        }
+
+        .section {
+            padding: 3rem 0rem 3rem 0rem;
+        }
+
+        /* ===== NAV ===== */
+        /* ===== NAV ===== */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.8rem 4rem;
+            transition: all 0.4s ease;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+        }
+
+        nav.solid {
+            border-bottom: 1px solid var(--line);
+        }
+
+        .nav-logo img {
+            height: 48px;
+            width: auto;
+            display: block;
+        }
+
+        /* DESKTOP LINKS */
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--ink);
+            text-decoration: none;
+            text-transform: uppercase;
+            position: relative;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0;
+            height: 1px;
+            background: var(--green);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* MENU BUTTON */
+        .menu-toggle {
+            display: none;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            border: none;
+            background: #f4f4f4;
+            position: relative;
+            cursor: pointer;
+            z-index: 1100;
+        }
+
+        .menu-toggle span {
+            position: absolute;
+            left: 50%;
+            width: 22px;
+            height: 2px;
+            background: var(--ink);
+            transition: all 0.4s ease;
+        }
+
+        .menu-toggle span:first-child {
+            top: 21px;
+            transform: translateX(-50%);
+        }
+
+        .menu-toggle span:last-child {
+            top: 29px;
+            transform: translateX(-50%);
+        }
+
+        /* ACTIVE ICON */
+        .menu-toggle.active span:first-child {
+            transform: translateX(-50%) rotate(45deg);
+            top: 25px;
+        }
+
+        .menu-toggle.active span:last-child {
+            transform: translateX(-50%) rotate(-45deg);
+            top: 25px;
+        }
+
+        /* =========================
+   MOBILE NAV
+========================= */
+        @media (max-width: 768px) {
+
+            nav {
+                padding: 1rem 1.2rem;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 85%;
+                height: 100vh;
+                background: rgba(255, 255, 255, 0.96);
+                backdrop-filter: blur(24px);
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+
+                padding: 3rem;
+
+                gap: 2rem;
+
+                transition: right 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+
+                border-left: 1px solid rgba(0, 0, 0, 0.05);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links li {
+                overflow: hidden;
+            }
+
+            .nav-links a {
+                font-size: 1.8rem;
+                font-weight: 600;
+                letter-spacing: -1px;
+                transform: translateX(60px);
+                opacity: 0;
+                transition: all 0.6s ease;
+            }
+
+            /* STAGGER ANIMATION */
+            .nav-links.active a {
+                transform: translateX(0);
+                opacity: 1;
+            }
+
+            .nav-links.active li:nth-child(1) a {
+                transition-delay: 0.1s;
+            }
+
+            .nav-links.active li:nth-child(2) a {
+                transition-delay: 0.16s;
+            }
+
+            .nav-links.active li:nth-child(3) a {
+                transition-delay: 0.22s;
+            }
+
+            .nav-links.active li:nth-child(4) a {
+                transition-delay: 0.28s;
+            }
+
+            .nav-links.active li:nth-child(5) a {
+                transition-delay: 0.34s;
+            }
+
+            .nav-links.active li:nth-child(6) a {
+                transition-delay: 0.40s;
+            }
+
+            .nav-links.active li:nth-child(7) a {
+                transition-delay: 0.46s;
+            }
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            padding-top: 5rem;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.672), rgba(0, 128, 0, 0)),
+                url('media/489203.jpg') center/cover no-repeat;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 6rem 4rem 3rem 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 2rem;
+        }
+
+        .hero-tag span {
+            display: inline-block;
+            width: 30px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(3rem, 5.5vw, 5.5rem);
+            font-weight: 800;
+            line-height: 0.95;
+            letter-spacing: -3px;
+            color: var(--cream);
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+
+        .hero h1 .line {
+            display: block;
+            transform: translateY(100%);
+            animation: slideUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .hero h1 .line:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+
+        .hero h1 .line:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+
+        .hero-accent {
+            color: var(--gold);
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            color: #ffffff;
+            line-height: 1.8;
+            max-width: 440px;
+            margin-bottom: 3rem;
+            opacity: 0;
+            animation: fadeIn 1s ease 0.6s forwards;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            opacity: 0;
+            animation: fadeIn 1s ease 0.8s forwards;
+        }
+
+        .btn-main {
+            background: var(--green);
+            color: var(--white);
+            padding: 1.1rem 2.5rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            /* border: 2px solid var(--ink); */
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-main:hover {
+            background: var(--gold);
+            border-color: var(--green);
+            color: var(--white);
+        }
+
+        .btn-ghost {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--ink);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: gap 0.3s ease;
+        }
+
+        .btn-ghost:hover {
+            gap: 1rem;
+            color: var(--ink);
+        }
+
+        /* ===== HERO RIGHT / FORM ===== */
+        /* .hero-right {
+    background: #f7f7f700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 2rem;
+} */
+
+        .hero-right::before {
+            display: none;
+        }
+
+        .form-wrap {
+            width: 100%;
+            margin-top: 50px !important;
+            max-width: 500px;
+            background: #ffffff;
+            padding: 2.5rem;
+            border-radius: 14px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+        }
+
+        .form-wrap h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 0.3rem;
+        }
+
+        .form-wrap>p {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 2rem;
+        }
+
+        .field {
+            margin-bottom: 1.2rem;
+            position: relative;
+        }
+
+        .field input,
+        .field select {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #e5e5e5;
+            padding: 0.9rem 0;
+            color: #111;
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .field input::placeholder {
+            color: #3d3d3d;
+        }
+
+        .field input:focus,
+        .field select:focus {
+            border-color: #0B3D2E;
+            /* your green */
+        }
+
+        .btn-submit {
+            width: 100%;
+            margin-top: 1.5rem;
+            background: #111;
+            color: #fff;
+            padding: 1rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            border-radius: 6px;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background: #0B3D2E;
+        }
+
+        /* ===== MARQUEE ===== */
+        .marquee-strip {
+            background: var(--green);
+            padding: 1rem 0;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .marquee-inner {
+            display: inline-flex;
+            animation: marquee 20s linear infinite;
+        }
+
+        .marquee-item {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 0 3rem;
+        }
+
+        .marquee-dot {
+            color: var(--gold);
+        }
+
+        @keyframes marquee {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* ===== STATS BAR ===== */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .stat-item {
+            padding: 1.5rem 3rem;
+            border-right: 1px solid var(--line);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .stat-item::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 0;
+            background: var(--cream);
+            transition: height 0.4s ease;
+        }
+
+        .stat-item:hover::before {
+            height: 100%;
+        }
+
+        /* NUMBER WRAP */
+        .stat-number {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 4px;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* MAIN NUMBER */
+        .stat-num {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--ink);
+            letter-spacing: -2px;
+            line-height: 1;
+        }
+
+        /* + OR % SYMBOL */
+        .stat-symbol {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--ink);
+            line-height: 1;
+            margin-top: 4px;
+        }
+
+        /* LABEL */
+        .stat-label {
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--muted);
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ===== SECTIONS ===== */
+        section {
+            padding: 4rem;
+        }
+
+        .section-header {
+            margin-bottom: 1rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--line);
+            text-align: center;
+        }
+
+        .section-num {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: 3px;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            font-weight: 800;
+            letter-spacing: -2px;
+            color: rgb(39, 69, 39);
+            line-height: 1;
+        }
+
+        /* ===== WHY US ===== */
+        /* ===== WHY US ===== */
+        .why-us {
+            background: var(--white);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2px;
+        }
+
+        /* COMMON CARD STYLE */
+        .feature {
+            padding: 1rem 1.5rem;
+            position: relative;
+            overflow: hidden;
+            /* border-radius: 24px; */
+            color: #fff;
+        }
+
+        /* CARD 1 */
+        .feature:nth-child(1) {
+            background: linear-gradient(135deg, #b3a400, #000000);
+        }
+
+        /* CARD 2 */
+        .feature:nth-child(2) {
+            background: linear-gradient(135deg, rgb(0, 40, 3), #266b47);
+        }
+
+        /* CARD 3 */
+        .feature:nth-child(3) {
+            background: linear-gradient(135deg, #b3a400, #000000);
+        }
+
+        /* CARD 4 */
+        .feature:nth-child(4) {
+            background: linear-gradient(135deg, rgb(0, 40, 3), #266b47);
+        }
+
+        /* NUMBER */
+        .feature-num {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+            color: rgb(255, 255, 255);
+            margin-bottom: 2rem;
+        }
+
+        /* HEADING */
+        .feature h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        /* TEXT */
+        .feature p {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: rgb(255, 255, 255);
+        }
+
+        /* ===== COURSE TABLE ===== */
+        .table-row:nth-child(even) .table-key {
+            background: #ffffff;
+        }
+
+        .table-row:nth-child(odd) .table-key {
+            background: #c5eac4;
+        }
+
+        /* ODD rows = GREEN */
+        .table-row:nth-child(odd) .table-key,
+        .table-row:nth-child(odd) .table-val {
+            background: #b7dab6;
+        }
+
+        /* EVEN rows = WHITE */
+        .table-row:nth-child(even) .table-key,
+        .table-row:nth-child(even) .table-val {
+            background: #ffffff;
+        }
+
+        .course-section {
+            background: var(--cream);
+        }
+
+        .table-wrap {
+            border: 1px solid var(--line);
+            overflow: hidden;
+        }
+
+        .table-row {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            border-bottom: 1px solid var(--line);
+            transition: background 0.3s ease;
+        }
+
+        .table-row:last-child {
+            border-bottom: none;
+        }
+
+        .table-row:hover {
+            background: rgba(26, 92, 58, 0.04);
+        }
+
+        .table-key {
+            padding: 1rem 1.5rem;
+            border-right: 1px solid var(--line);
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--ink);
+            display: flex;
+            align-items: center;
+            background: #b7dab6;
+        }
+
+        /* Better targeting */
+        .table-key:nth-of-type(even) {
+            background: #ffffff;
+        }
+
+        .table-val {
+            background: rgb(255, 255, 255);
+            padding: 1rem 2.5rem;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            line-height: 1.7;
+        }
+
+        .table-val ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .table-val li {
+            padding: 0.3rem 0;
+            padding-left: 1.2rem;
+            position: relative;
+            font-size: 1.2rem;
+        }
+
+        .table-val li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-size: 1.2rem;
+        }
+
+        /* ===== SUBJECTS ===== */
+        .subjects-section {
+            background: var(--white);
+        }
+
+        .years-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            border: 1px solid var(--line);
+        }
+
+        .year-col {
+            padding: 1rem 2.5rem;
+            border-right: 1px solid var(--line);
+            position: relative;
+            transition: background 0.4s ease;
+        }
+
+        .year-col {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .year-col:last-child {
+            border-right: none;
+        }
+
+        .know-more-btn {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 0.6rem 0.3rem;
+            background: linear-gradient(135deg, #c8a94a 0%, #f2d182 100%);
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 500;
+            border-radius: 2px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        /* Hover effect */
+        .know-more-btn:hover {
+            background: #b89535;
+            /* slightly darker gold */
+            transform: translateY(-2px);
+        }
+
+        /* Optional arrow animation */
+        .know-more-btn::after {
+            content: " →";
+            opacity: 0;
+            transition: 0.3s;
+        }
+
+        .know-more-btn:hover::after {
+            opacity: 1;
+            margin-left: 4px;
+        }
+
+        .know-more-btn {
+            margin-top: auto;
+            /* 🔥 THIS FIXES ALIGNMENT */
+        }
+
+        .year-number {
+            font-weight: bold !important;
+            color: var(--green);
+        }
+
+        .year-label {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            border: 1px solid var((--green-light));
+            letter-spacing: 3px;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .year-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+
+        .subject-item {
+            padding: 0.7rem 0;
+            border-bottom: 1px solid var(--line);
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: var(--ink);
+            transition: color 0.2s, padding 0.2s;
+        }
+
+        .subject-item:last-child {
+            border-bottom: none;
+        }
+
+        .subject-item {
+            display: flex;
+            align-items: center;
+            /* 🔥 CENTER ALIGN (main fix) */
+            gap: 10px;
+
+            padding: 0.7rem 0;
+            border-bottom: 1px solid var(--line);
+            font-size: 1rem;
+            color: var(--ink2);
+        }
+
+        /* Dot */
+        .subject-item::before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            background: var(--gold);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .year-col:nth-child(2),
+        .year-col:nth-child(4) {
+            background: var(--cream);
+            color: #fff;
+            /* for readability */
+        }
+
+
+        /* ===== SCOPE ===== */
+        .scope-section {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.85), rgba(0, 64, 0, 0.75)),
+                url('media/ayurveda-collection-concept.jpg') center/cover no-repeat fixed;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Animated background overlay */
+        .scope-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(200, 169, 74, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(26, 92, 58, 0.15) 0%, transparent 50%);
+            pointer-events: none;
+            animation: subtleShift 15s ease-in-out infinite;
+        }
+
+        @keyframes subtleShift {
+
+            0%,
+            100% {
+                opacity: 0.5;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.8;
+                transform: scale(1.05);
+            }
+        }
+
+        .scope-section .section-title {
+            color: var(--white);
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .scope-section .section-num {
+            color: rgba(255, 255, 255, 0.4) !important;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .scope-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            position: relative;
+            z-index: 1;
+        }
+
+        .scope-item {
+            padding: 3rem 2.5rem;
+            border-right: 1px solid rgba(255, 255, 255, 0.08);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            position: relative;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Gradient overlay on hover */
+        .scope-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg,
+                    rgba(26, 92, 58, 0) 0%,
+                    rgba(26, 92, 58, 0.8) 100%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            z-index: 0;
+        }
+
+        .scope-item:hover::before {
+            opacity: 1;
+        }
+
+        /* Shine effect on hover */
+        /* .scope-item::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg,
+                    transparent 30%,
+                    rgba(255, 255, 255, 0.1) 50%,
+                    transparent 70%);
+            transform: translateX(-100%) translateY(-100%) rotate(45deg);
+            transition: transform 0.6s ease;
+        }
+
+        .scope-item:hover::after {
+            transform: translateX(100%) translateY(100%) rotate(45deg);
+        } */
+
+        .scope-item:hover {
+            background: rgba(26, 92, 58, 0.3);
+            border-color: rgba(200, 169, 74, 0.3);
+            transform: translateY(-8px);
+            box-shadow:
+                0 12px 30px rgba(26, 92, 58, 0.4),
+                0 0 0 1px rgba(200, 169, 74, 0.2) inset;
+        }
+
+        /* Remove borders on edges */
+        .scope-item:nth-child(3n) {
+            border-right: none;
+        }
+
+        .scope-item:nth-child(4),
+        .scope-item:nth-child(5),
+        .scope-item:nth-child(6) {
+            border-bottom: none;
+        }
+
+        /* Icon wrapper */
+        .scope-icon-wrap {
+            width: 70px;
+            height: 70px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.05);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Rotating border effect */
+        .scope-icon-wrap::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: 50%;
+            padding: 2px;
+            background: linear-gradient(135deg, var(--gold), transparent, var(--gold));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .scope-item:hover .scope-icon-wrap::before {
+            opacity: 1;
+            animation: rotate 2s linear infinite;
+        }
+
+        @keyframes rotate {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .scope-item:hover .scope-icon-wrap {
+            border-color: var(--gold);
+            background: rgba(200, 169, 74, 0.15);
+            transform: scale(1.15);
+            box-shadow: 0 0 30px rgba(200, 169, 74, 0.4);
+        }
+
+        .scope-icon-wrap i {
+            font-size: 2.2rem;
+            color: var(--gold);
+            transition: all 0.5s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .scope-item:hover .scope-icon-wrap i {
+            color: #fff;
+            filter: drop-shadow(0 0 8px var(--gold));
+            transform: scale(1.1);
+        }
+
+        .scope-item h5 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.45rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.5;
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+        .scope-item:hover h5 {
+            color: #ffffff;
+            transform: translateX(4px);
+            text-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Pulse animation for icons */
+        @keyframes pulse {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(200, 169, 74, 0.7);
+            }
+
+            50% {
+                box-shadow: 0 0 0 15px rgba(200, 169, 74, 0);
+            }
+        }
+
+        /* Mobile Responsive Updates */
+        @media (max-width: 991px) {
+            .scope-grid {
+                grid-template-columns: 1fr 1fr;
+                border-radius: 12px;
+            }
+
+            .scope-item {
+                padding: 2.5rem 2rem;
+            }
+
+            .scope-item:nth-child(2n) {
+                border-right: none;
+            }
+
+            .scope-item:nth-child(3),
+            .scope-item:nth-child(4),
+            .scope-item:nth-child(5),
+            .scope-item:nth-child(6) {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            }
+
+            .scope-item:nth-child(5),
+            .scope-item:nth-child(6) {
+                border-bottom: none;
+            }
+
+            .scope-icon-wrap {
+                width: 60px;
+                height: 60px;
+            }
+
+            .scope-icon-wrap i {
+                font-size: 1.8rem;
+            }
+
+            .scope-item h5 {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .scope-section {
+                background-attachment: scroll;
+            }
+
+            .scope-grid {
+                grid-template-columns: 1fr;
+                border-radius: 8px;
+            }
+
+            .scope-item {
+                padding: 2rem 1.5rem;
+                border-right: none !important;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            }
+
+            .scope-item:last-child {
+                border-bottom: none;
+            }
+
+            .scope-icon-wrap {
+                width: 55px;
+                height: 55px;
+                margin-bottom: 1.5rem;
+            }
+
+            .scope-icon-wrap i {
+                font-size: 1.6rem;
+            }
+
+            .scope-item h5 {
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+
+            .scope-item:hover {
+                transform: translateY(-4px);
+            }
+        }
+
+        /* ===== ADMISSIONS ===== */
+        .admission-section {
+            background: var(--cream);
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            border: 1px solid var(--line);
+            margin-bottom: 4rem;
+        }
+
+        .process-card {
+            background-color: #E3DBBB;
+            padding: 2rem;
+            border-right: 2px solid white;
+            position: relative;
+            overflow: hidden;
+        }
+
+
+        .process-card:last-child {
+            border-right: none;
+        }
+
+        .process-num {
+            font-family: 'Poppins', sans-serif;
+            font-size: 5rem;
+            font-weight: 800;
+            color: rgb(60, 39, 39) !important;
+            line-height: 1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -4px;
+        }
+
+        .process-card h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 700 !important;
+            letter-spacing: -0.5px;
+            margin-bottom: 1.5rem;
+            color: var(--green);
+        }
+
+        .process-card p {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: #000000;
+        }
+
+        .docs-grid {
+            display: grid;
+            background-color: var(--white);
+            grid-template-columns: 1fr 1fr;
+            border: 1px solid var(--line);
+        }
+
+        .docs-col {
+            padding: 0.5rem 3.5rem;
+            border-right: 1px solid var(--line);
+        }
+
+        .docs-col:last-child {
+            border-right: none;
+        }
+
+        .docs-col h5 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--gold);
+            margin-bottom: 2rem;
+        }
+
+        .doc-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--line);
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--ink);
+            transition: padding-left 0.2s, color 0.2s;
+        }
+
+        .doc-item:last-child {
+            border-bottom: none;
+        }
+
+        .doc-item:hover {
+            padding-left: 0.5rem;
+            color: var(--green);
+        }
+
+        .doc-item::before {
+            content: '';
+            width: 5px;
+            height: 5px;
+            background: var(--gold);
+            flex-shrink: 0;
+        }
+
+        /* ===== COLLEGES ===== */
+        .colleges-section {
+            background: var(--white);
+        }
+
+        .colleges-list {
+            border: 1px solid var(--line);
+        }
+
+        .college-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.8rem 1rem;
+            border-bottom: 1px solid var(--line);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* LEFT GREEN LINE */
+        .college-row::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 0;
+            background: var(--green);
+            transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* HOVER EFFECT */
+        .college-row:hover {
+            background: #eef9f0;
+            /* light green */
+            padding-left: 1.4rem;
+        }
+
+        .college-row:hover::before {
+            width: 4px;
+        }
+
+        .college-row:last-child {
+            border-bottom: none;
+        }
+
+        .college-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex: 1;
+        }
+
+        /* LOGO */
+        .college-logo {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            flex-shrink: 0;
+            transition: transform 0.8s ease;
+        }
+
+        /* 360 FLIP */
+        .college-row:hover .college-logo {
+            transform: translateY(-4px) scale(1.05);
+        }
+
+        .college-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .college-name {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--ink);
+            letter-spacing: -0.3px;
+        }
+
+        .college-city {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: var(--muted);
+            margin-top: 0.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .college-city i {
+            font-size: 0.7rem;
+            color: var(--gold);
+        }
+
+        .btn-enquire {
+            background: var(--green-light);
+            color: white !important;
+            border: 1px solid var(--line);
+            padding: 0.6rem 1.5rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--ink);
+            text-decoration: none;
+            transition: all 0.3s;
+            flex-shrink: 0;
+        }
+
+        .btn-enquire:hover,
+        .college-row:hover .btn-enquire {
+            background: var(--green-light);
+            color: var(--white);
+            border-color: var(--green);
+            transform: translateX(1px);
+        }
+
+        /* FAQ */
+        .faq-sec-label {
+
+            font-size: .72rem;
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 1.2rem;
+        }
+
+        .faq-big-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.8rem, 5vw, 5.5rem);
+            font-weight: 800;
+            letter-spacing: -3px;
+            color: var(--ink);
+            line-height: .95;
+            position: sticky;
+            top: 100px;
+        }
+
+        .faq-left-col {
+            padding-right: 3rem;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--line);
+        }
+
+        .faq-q {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.8rem 1rem;
+            cursor: pointer;
+        }
+
+        .faq-q h5 {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -.3px;
+            margin: 0;
+            transition: color .3s;
+            line-height: 1.4;
+        }
+
+        .faq-q:hover h5 {
+            color: var(--green);
+        }
+
+        .faq-toggle {
+            width: 34px;
+            height: 34px;
+            border: 1px solid var(--line);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+            transition: all .3s;
+        }
+
+        .faq-item.active .faq-toggle {
+            background: var(--ink);
+            color: #fff;
+            transform: rotate(45deg);
+        }
+
+        .faq-a {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .5s cubic-bezier(.16, 1, .3, 1);
+        }
+
+        .faq-a p {
+            padding: .5rem 1rem 1.8rem;
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: #1c1c1c;
+            margin: 0;
+        }
+
+        .faq-item.active .faq-a {
+            max-height: 300px;
+        }
+
+        @media(max-width:991px) {
+            .faq-big-title {
+                position: static;
+                font-size: clamp(2.5rem, 8vw, 4rem);
+                letter-spacing: -2px;
+                margin-bottom: 2.5rem;
+            }
+
+            .faq-left-col {
+                padding-right: 0;
+            }
+        }
+
+        /* ===== CTA ===== */
+        .cta-section {
+            background: linear-gradient(135deg, rgb(0, 59, 9) 0%, rgba(0, 0, 0, 0.376) 60%),
+                url('media/212.jpg.jpeg') center/cover no-repeat;
+            padding: 7rem 6rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 4rem;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .cta-text h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2rem, 3.5vw, 3.5rem);
+            font-weight: 800;
+            letter-spacing: -2px;
+            color: var(--white);
+            line-height: 1;
+            margin-bottom: 1rem;
+            text-align: start;
+        }
+
+        .cta-text p {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .btn-cta {
+            background: var(--white);
+            color: var(--green);
+            padding: 1.3rem 3.5rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-decoration: none;
+            flex-shrink: 0;
+            transition: all 0.3s;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-cta:hover {
+            background: var(--gold);
+            color: var(--ink);
+        }
+
+
+        /* ===== WHATSAPP ===== */
+        .wa-btn {
+            position: fixed;
+            bottom: 2.5rem;
+            right: 2.5rem;
+            width: 56px;
+            height: 56px;
+            background: #25D366;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
+            text-decoration: none;
+        }
+
+        .wa-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 32px rgba(37, 211, 102, 0.4);
+        }
+
+        .wa-btn i {
+            font-size: 1.5rem;
+            color: #fff;
+        }
+
+
+        /* =========================
+   MOBILE COLLEGE CARDS
+========================= */
+        @media (max-width: 768px) {
+
+            .colleges-list {
+                border: none;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .college-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+                padding: 1.4rem;
+                border: 1px solid var(--line);
+                border-radius: 20px;
+                background: var(--white);
+                min-height: 220px;
+                transition: all 0.5s ease;
+            }
+
+            .college-info {
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+            }
+
+            .college-logo {
+                width: 72px;
+                height: 72px;
+            }
+
+            .college-text {
+                width: 100%;
+            }
+
+            .college-name {
+                font-size: 1.2rem;
+                line-height: 1.3;
+            }
+
+            .college-city {
+                font-size: 0.9rem;
+                margin-top: 0.4rem;
+            }
+
+            .btn-enquire {
+                width: 100%;
+                text-align: center;
+                padding: 0.9rem 1rem;
+                border-radius: 12px;
+                font-size: 0.85rem;
+            }
+
+            /* CENTER SCROLL HOVER EFFECT */
+            .college-row.active-card {
+                background: #eef9f0;
+                transform: scale(1.02);
+                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+            }
+
+            .college-row.active-card::before {
+                width: 4px;
+            }
+
+            .college-row.active-card .college-logo {
+                transform: translateY(-4px) scale(1.05);
+            }
+
+            .college-row.active-card .btn-enquire {
+                background: var(--green-light);
+                color: var(--white);
+                border-color: var(--green);
+            }
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes slideUp {
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* ===== SCROLL REVEAL ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.revealed {
+            opacity: 1;
+            transform: none;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 991px) {
+
+            .hero {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+
+            .hero-left {
+                padding: 8rem 2rem 4rem;
+            }
+
+            .hero-right {
+                padding: 4rem 2rem;
+            }
+
+            .stats-bar {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            section {
+                padding: 5rem 2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .years-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .scope-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .scope-item:nth-child(3n) {
+                border-right: 1px solid rgba(255, 255, 255, 0.08);
+            }
+
+            .scope-item:nth-child(2n) {
+                border-right: none;
+            }
+
+            .scope-item:nth-child(4),
+            .scope-item:nth-child(5),
+            .scope-item:nth-child(6) {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            }
+
+            .scope-item:nth-child(5),
+            .scope-item:nth-child(6) {
+                border-bottom: none;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-card {
+                border-right: none;
+                border-bottom: 1px solid var(--line);
+            }
+
+            .process-card:last-child {
+                border-bottom: none;
+            }
+
+            .docs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .docs-col {
+                border-right: none;
+                border-bottom: 1px solid var(--line);
+            }
+
+            .docs-col:last-child {
+                border-bottom: none;
+            }
+
+            .cta-section {
+                flex-direction: column;
+                padding: 5rem 2rem;
+                text-align: center;
+            }
+
+            footer {
+                padding: 4rem 2rem 2rem;
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .table-row {
+                grid-template-columns: 140px 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .stats-bar {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .features-grid .feature {
+                border-right: none;
+                border-bottom: 1px solid var(--line);
+            }
+
+            .years-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .year-col {
+                border-right: none;
+                border-bottom: 1px solid var(--line);
+            }
+
+            .scope-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .scope-item {
+                border-right: none !important;
+            }
+
+            .table-row {
+                grid-template-columns: 1fr;
+            }
+
+            .table-key {
+                border-right: none;
+                border-bottom: 1px solid var(--line);
+            }
+
+            .college-row {
+                padding: 1.2rem 1.5rem;
+            }
+
+            .college-logo {
+                width: 50px;
+                height: 50px;
+            }
+
+            section {
+                padding: 4rem 1.5rem;
+            }
+        }
+
+        /* ===== MOBILE RESPONSIVE QUERIES ===== */
+
+        /* Large Tablets (768px - 991px) */
+        @media (max-width: 991px) {
+
+            .hero {
+                grid-template-columns: 1fr;
+                min-height: auto;
+                padding-top: 4rem;
+            }
+
+            .hero-left {
+                padding: 6rem 2rem 3rem;
+            }
+
+            .hero h1 {
+                font-size: clamp(2.5rem, 8vw, 4rem);
+                letter-spacing: -2px;
+            }
+
+            .hero-right {
+                padding: 3rem 2rem;
+                background: rgba(255, 255, 255, 0.98);
+            }
+
+            .form-wrap {
+                max-width: 100%;
+                margin-top: 0 !important;
+            }
+
+            .stats-bar {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stat-item:nth-child(2n) {
+                border-right: none;
+            }
+
+            section {
+                padding: 4rem 2rem;
+            }
+
+            .section-title {
+                font-size: clamp(2rem, 6vw, 3rem);
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 1px;
+            }
+
+            .feature {
+                padding: 2rem 1.5rem;
+            }
+
+            .table-row {
+                grid-template-columns: 180px 1fr;
+            }
+
+            .table-key {
+                font-size: 0.9rem;
+                padding: 1rem;
+            }
+
+            .table-val {
+                font-size: 1rem;
+                padding: 1rem 1.5rem;
+            }
+
+            .table-val li {
+                font-size: 1rem;
+            }
+
+            .years-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .year-col {
+                padding: 2rem 1.5rem;
+                border-bottom: 1px solid var(--line);
+            }
+
+            .year-col:nth-child(2n) {
+                border-right: none;
+            }
+
+            .year-label {
+                font-size: 1.5rem;
+            }
+
+            .year-title {
+                font-size: 1.1rem;
+            }
+
+            .subject-item {
+                font-size: 0.95rem;
+            }
+
+            .scope-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .scope-item {
+                padding: 2.5rem 2rem;
+            }
+
+            .scope-item:nth-child(2n) {
+                border-right: none;
+            }
+
+            .scope-item:nth-child(3),
+            .scope-item:nth-child(4),
+            .scope-item:nth-child(5),
+            .scope-item:nth-child(6) {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            }
+
+            .scope-item:nth-child(5),
+            .scope-item:nth-child(6) {
+                border-bottom: none;
+            }
+
+            .scope-item h5 {
+                font-size: 1.2rem;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-card {
+                border-right: none;
+                border-bottom: 2px solid white;
+                padding: 3rem 2rem;
+            }
+
+            .process-card:last-child {
+                border-bottom: none;
+            }
+
+            .process-num {
+                font-size: 4rem;
+            }
+
+            .process-card h4 {
+                font-size: 1.3rem;
+            }
+
+            .docs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .docs-col {
+                border-right: none;
+                border-bottom: 1px solid var(--line);
+                padding: 2rem 2rem;
+            }
+
+            .docs-col:last-child {
+                border-bottom: none;
+            }
+
+            .doc-item {
+                font-size: 1rem;
+            }
+
+            .college-row {
+                padding: 1.5rem 2rem;
+            }
+
+            .college-name {
+                font-size: 1rem;
+            }
+
+            .college-logo {
+                width: 60px;
+                height: 60px;
+            }
+
+            .cta-section {
+                flex-direction: column;
+                padding: 5rem 2rem;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .cta-text {
+                text-align: center !important;
+            }
+
+            .cta-text h2 {
+                font-size: clamp(1.8rem, 6vw, 2.5rem);
+                text-align: center;
+            }
+
+            .btn-cta {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            footer {
+                padding: 4rem 2rem 2rem;
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                text-align: center;
+            }
+
+            .footer-logo img {
+                margin: 0 auto;
+            }
+
+            .footer-contact {
+                text-align: center !important;
+            }
+
+            .faq-big-title {
+                position: static;
+                font-size: clamp(2.5rem, 8vw, 4rem);
+                letter-spacing: -2px;
+                margin-bottom: 2.5rem;
+            }
+
+            .faq-left-col {
+                padding-right: 0;
+            }
+
+            .banner {
+                padding: 2.5rem 2rem;
+            }
+
+            .cta-button {
+                padding: 0.9rem 2rem;
+                font-size: 1rem;
+            }
+        }
+
+        /* Medium Mobile (577px - 767px) */
+        @media (max-width: 767px) {
+            .hero h1 {
+                font-size: clamp(2rem, 10vw, 3rem);
+            }
+
+            .hero p {
+                font-size: 0.95rem;
+            }
+
+            .btn-main {
+                padding: 1rem 2rem;
+                font-size: 0.85rem;
+            }
+
+            .marquee-item {
+                font-size: 0.7rem;
+                padding: 0 2rem;
+            }
+
+            .stats-bar {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .stat-num {
+                font-size: 2.5rem;
+            }
+
+            .stat-symbol {
+                font-size: 1.2rem;
+            }
+
+            .stat-label {
+                font-size: 0.75rem;
+            }
+
+            .section-num {
+                font-size: 0.7rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature {
+                border-right: none;
+                border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .feature:last-child {
+                border-bottom: none;
+            }
+
+            .years-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .year-col {
+                border-right: none;
+            }
+
+            .scope-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .scope-item {
+                border-right: none !important;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            }
+
+            .scope-item:last-child {
+                border-bottom: none;
+            }
+
+            .college-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+                padding: 1.5rem;
+            }
+
+            .college-info {
+                width: 100%;
+            }
+
+            .btn-enquire {
+                width: 100%;
+                text-align: center;
+            }
+
+            .faq-q h5 {
+                font-size: 1rem;
+            }
+
+            .faq-toggle {
+                width: 30px;
+                height: 30px;
+                font-size: 1rem;
+            }
+        }
+
+        /* Small Mobile (max-width: 576px) */
+        @media (max-width: 576px) {
+
+            .hero {
+                padding-top: 3rem;
+            }
+
+            .hero-left {
+                padding: 5rem 1.5rem 2rem;
+            }
+
+            .hero-tag {
+                font-size: 0.7rem;
+                letter-spacing: 1.5px;
+            }
+
+            .hero h1 {
+                font-size: clamp(1.8rem, 12vw, 2.5rem);
+                letter-spacing: -1px;
+                margin-bottom: 1.5rem;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+                line-height: 1.6;
+                margin-bottom: 2rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: stretch;
+            }
+
+            .btn-main {
+                padding: 0.9rem 1.5rem;
+                font-size: 0.8rem;
+                text-align: center;
+            }
+
+            .btn-ghost {
+                justify-content: center;
+            }
+
+            .hero-right {
+                padding: 2rem 1.5rem;
+            }
+
+            .form-wrap {
+                padding: 2rem 1.5rem;
+            }
+
+            .form-wrap h3 {
+                font-size: 1rem;
+            }
+
+            .form-wrap>p {
+                font-size: 0.85rem;
+            }
+
+            .field input,
+            .field select {
+                font-size: 0.9rem;
+                padding: 0.8rem 0;
+            }
+
+            .btn-submit {
+                padding: 0.9rem;
+                font-size: 0.85rem;
+            }
+
+            .marquee-item {
+                font-size: 0.65rem;
+                letter-spacing: 2px;
+                padding: 0 1.5rem;
+            }
+
+            .stats-bar {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .stat-item {
+                padding: 1.5rem 1rem;
+            }
+
+            .stat-num {
+                font-size: 2rem;
+            }
+
+            .stat-symbol {
+                font-size: 1rem;
+                margin-top: 2px;
+            }
+
+            .stat-label {
+                font-size: 0.7rem;
+            }
+
+            section {
+                padding: 3rem 1.5rem;
+            }
+
+            .section-num {
+                font-size: 0.65rem;
+                letter-spacing: 2px;
+            }
+
+            .section-title {
+                font-size: clamp(1.8rem, 8vw, 2.5rem);
+                letter-spacing: -1px;
+            }
+
+            .section-header {
+                margin-bottom: 2rem;
+                padding-bottom: 1.5rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature {
+                padding: 2rem 1.5rem;
+            }
+
+            .feature-num {
+                font-size: 0.85rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .feature h4 {
+                font-size: 1.1rem;
+                margin-bottom: 0.8rem;
+            }
+
+            .feature p {
+                font-size: 0.9rem;
+                line-height: 1.7;
+            }
+
+            .table-wrap {
+                margin: 0 !important;
+            }
+
+            .table-row {
+                grid-template-columns: 1fr;
+            }
+
+            .table-key {
+                border-right: none;
+                border-bottom: 1px solid var(--line);
+                font-size: 0.85rem;
+                padding: 0.8rem 1rem;
+            }
+
+            .table-val {
+                font-size: 0.9rem;
+                padding: 1rem;
+            }
+
+            .table-val li {
+                font-size: 0.9rem;
+            }
+
+            .banner {
+                padding: 2rem 1.5rem;
+                margin-top: 20px;
+                border-radius: 10px;
+            }
+
+            .banner h1 {
+                font-size: clamp(1rem, 5vw, 1.1rem);
+            }
+
+            .cta-button {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+                width: 100%;
+            }
+
+            .accent-line {
+                width: 40px;
+                margin-bottom: 1rem;
+            }
+
+            .years-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .year-col {
+                padding: 2rem 1.5rem;
+                border-right: none;
+            }
+
+            .year-label {
+                font-size: 1.3rem;
+                margin-bottom: 1rem;
+            }
+
+            .year-title {
+                font-size: 1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .subject-item {
+                font-size: 0.9rem;
+                padding: 0.6rem 0;
+            }
+
+            .know-more-btn {
+                font-size: 0.9rem;
+                padding: 0.5rem 0.3rem;
+            }
+
+            .scope-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .scope-item {
+                padding: 2rem 1.5rem;
+                border-right: none !important;
+            }
+
+            .scope-icon-wrap {
+                width: 50px;
+                height: 50px;
+                margin-bottom: 1.5rem;
+            }
+
+            .scope-icon-wrap i {
+                font-size: 1.5rem;
+            }
+
+            .scope-item h5 {
+                font-size: 1.1rem;
+            }
+
+            .process-card {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .process-num {
+                font-size: 3.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .process-card h4 {
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
+            }
+
+            .process-card p {
+                font-size: 0.95rem;
+                line-height: 1.7;
+            }
+
+            .docs-col {
+                padding: 2rem 1.5rem;
+            }
+
+            .docs-col h5 {
+                font-size: 0.7rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .doc-item {
+                font-size: 0.9rem;
+                padding: 0.7rem 0;
+            }
+
+            .college-row {
+                padding: 1.2rem 1rem;
+            }
+
+            .college-logo {
+                width: 50px;
+                height: 50px;
+            }
+
+            .college-name {
+                font-size: 0.95rem;
+            }
+
+            .college-city {
+                font-size: 0.85rem;
+            }
+
+            .btn-enquire {
+                padding: 0.5rem 1.2rem;
+                font-size: 0.7rem;
+            }
+
+            .faq-sec-label {
+                font-size: 0.65rem;
+            }
+
+            .faq-big-title {
+                font-size: clamp(2rem, 10vw, 3rem);
+                margin-bottom: 2rem;
+            }
+
+            .faq-q {
+                padding: 1.5rem 0.8rem;
+            }
+
+            .faq-q h5 {
+                font-size: 0.95rem;
+                line-height: 1.5;
+            }
+
+            .faq-toggle {
+                width: 28px;
+                height: 28px;
+                font-size: 0.95rem;
+            }
+
+            .faq-a p {
+                padding: 0.5rem 0.8rem 1.5rem;
+                font-size: 0.9rem;
+                line-height: 1.7;
+            }
+
+            .cta-section {
+                padding: 4rem 1.5rem;
+            }
+
+            .cta-section::before {
+                font-size: 30vw;
+                right: -5vw;
+            }
+
+            .cta-text p {
+                font-size: 0.9rem;
+            }
+
+            .cta-text h2 {
+                font-size: clamp(1.5rem, 8vw, 2rem);
+                margin-bottom: 1.5rem;
+            }
+
+            .btn-cta {
+                padding: 1rem 2rem;
+                font-size: 0.85rem;
+                letter-spacing: 1.5px;
+                width: 100%;
+            }
+
+            footer {
+                padding: 3rem 1.5rem 2rem;
+            }
+
+            .footer-top {
+                gap: 2rem;
+            }
+
+            .footer-logo img {
+                height: 70px;
+            }
+
+            .footer-contact h5 {
+                font-size: 0.8rem;
+                letter-spacing: 2px;
+                margin-bottom: 1rem;
+            }
+
+            .contact-link {
+                font-size: 1rem;
+                padding: 0.3rem 0;
+            }
+
+            .wa-btn {
+                width: 50px;
+                height: 50px;
+                bottom: 1.5rem;
+                right: 1.5rem;
+            }
+
+            .wa-btn i {
+                font-size: 1.3rem;
+            }
+        }
+
+        /* Extra Small Mobile (max-width: 380px) */
+        @media (max-width: 380px) {
+            .hero h1 {
+                font-size: clamp(1.5rem, 14vw, 2rem);
+            }
+
+            .section-title {
+                font-size: clamp(1.5rem, 10vw, 2rem);
+            }
+
+            .stat-item {
+                padding: 1.2rem 0.8rem;
+            }
+
+            .stat-num {
+                font-size: 1.8rem;
+            }
+
+            .feature {
+                padding: 1.5rem 1rem;
+            }
+
+            .process-num {
+                font-size: 3rem;
+            }
+
+            .scope-item {
+                padding: 1.5rem 1rem;
+            }
+
+            .faq-big-title {
+                font-size: clamp(1.8rem, 12vw, 2.5rem);
+            }
+        }
+
+        /* Landscape Mobile Fix */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .hero {
+                min-height: auto;
+            }
+
+            .hero-left {
+                padding: 4rem 2rem 2rem;
+            }
+
+            .hero h1 {
+                margin-bottom: 1rem;
+            }
+
+            .hero p {
+                margin-bottom: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <!-- NAV -->
+    <nav id="navbar">
+
+        <a href="#" class="nav-logo">
+            <img src="media/BangaloreStudy_WLogo.svg" alt="BangaloreStudy Logo">
+        </a>
+
+        <!-- MENU BUTTON -->
+        <button class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- DESKTOP + MOBILE MENU -->
+        <ul class="nav-links" id="navMenu">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#why">Why Us</a></li>
+            <li><a href="#course">Course</a></li>
+            <li><a href="#scope">Scope</a></li>
+            <li><a href="#admissions">Admissions</a></li>
+            <li><a href="#colleges">Top Ayurvedic Colleges</a></li>
+            <li><a href="#faq">FAQs</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-left">
+            <div class="hero-tag"><span></span> Karnataka 2026–27</div>
+            <h1>
+                <span class="line">BAMS Course Admissions</span>
+                <span class="line">in Karnataka</span>
+                <span class="line hero-accent">2026–27</span>
+            </h1>
+            <p>Build a successful career in Ayurveda by securing admission to top BAMS colleges in Karnataka and
+                Bangalore with our expert guidance!</p>
+            <div class="hero-cta">
+                <a href="#admissions" class="btn-main">Connect With Our Experts</a>
+                <a href="#course" class="btn-ghost text-white">Explore Course <span>→</span></a>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="form-wrap">
+                <h3>Fill Out the Form & Get Assistance With the 2026-27 BAMS Admission</h3>
+                <form id="admissionForm">
+                    <div class="field"><input type="text" placeholder="Full Name:" required></div>
+                    <div class="field"><input type="email" placeholder="Email ID:" required></div>
+                    <div class="field"><input type="tel" placeholder="Phone NO:" required></div>
+                    <div class="field">
+                        <select required>
+                            <option value="">Select State</option>
+                            <option>Karnataka</option>
+                            <option>Andhra Pradesh</option>
+                            <option>Bihar</option>
+                            <option>Gujarat</option>
+                            <option>Kerala</option>
+                            <option>Maharashtra</option>
+                            <option>Tamil Nadu</option>
+                            <option>Telangana</option>
+                            <option>Uttar Pradesh</option>
+                            <option>West Bengal</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="field"><input type="text" placeholder="NEET Score:"></div>
+                    <button type="submit" class="btn-submit">Submit Enquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee-strip">
+        <div class="marquee-inner">
+            <span class="marquee-item">BAMS 2025–26 <span class="marquee-dot">◆</span></span>
+            <span class="marquee-item">Top Ayurvedic Colleges <span class="marquee-dot">◆</span></span>
+            <span class="marquee-item">NEET-UG Counselling <span class="marquee-dot">◆</span></span>
+            <span class="marquee-item">Karnataka Admissions <span class="marquee-dot">◆</span></span>
+            <span class="marquee-item">Scholarships Available <span class="marquee-dot">◆</span></span>
+            <span class="marquee-item">Direct Admission <span class="marquee-dot">◆</span></span>
+            <span class="marquee-item">Management Quota <span class="marquee-dot">◆</span></span>
+            <span class="marquee-item">5.5 Year Program <span class="marquee-dot">◆</span></span>
+            <span class="marquee-item">BAMS 2025–26 <span class="marquee-dot">◆</span></span>
+            <span class="marquee-item">Top Ayurvedic Colleges <span class="marquee-dot">◆</span></span>
+            <span class="marquee-item">NEET-UG Counselling <span class="marquee-dot">◆</span></span>
+            <span class="marquee-item">Karnataka Admissions <span class="marquee-dot">◆</span></span>
+            <span class="marquee-item">Scholarships Available <span class="marquee-dot">◆</span></span>
+            <span class="marquee-item">Direct Admission <span class="marquee-dot">◆</span></span>
+            <span class="marquee-item">Management Quota <span class="marquee-dot">◆</span></span>
+            <span class="marquee-item">5.5 Year Program <span class="marquee-dot">◆</span></span>
+        </div>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-bar reveal">
+        <div class="stat-item">
+            <div class="stat-number">
+                <span class="stat-num" data-target="50">0</span>
+                <span class="stat-symbol">+</span>
+            </div>
+            <span class="stat-label">Ayurvedic Colleges in Karnataka</span>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">
+                <span class="stat-num" data-target="5">0</span>
+                <span class="stat-symbol">+</span>
+            </div>
+            <span class="stat-label">Years of Experience</span>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">
+                <span class="stat-num" data-target="1000">0</span>
+                <span class="stat-symbol">+</span>
+            </div>
+            <span class="stat-label">Students Placed</span>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">
+                <span class="stat-num" data-target="100">0</span>
+                <span class="stat-symbol">%</span>
+            </div>
+            <span class="stat-label">Admission Success Rate
+            </span>
+        </div>
+    </div>
+
+    <!-- WHY US -->
+    <section class="why-us" id="why">
+        <div class="section-header reveal">
+            <span class="section-num">01 / Why Us</span>
+            <h2 class="section-title">Why Choose BangaloreStudy?</h2>
+        </div>
+        <div class="features-grid reveal">
+            <div class="feature">
+                <div class="feature-num">01</div>
+                <h4>Direct Admission to Top Colleges</h4>
+                <p>Qualified NEET-UG? Make sure to secure a BAMS seat at any of the top Ayurvedic colleges in Karnataka
+                    especially Bangalore through our direct admission pathway.
+                </p>
+            </div>
+            <div class="feature">
+                <div class="feature-num">02</div>
+                <h4>Fee Guidance</h4>
+                <p>Get in-depth information on fee structures, NRI quota, management quota fees, and low-fee BAMS
+                    colleges in Karnataka through our experts.
+                </p>
+            </div>
+            <div class="feature">
+                <div class="feature-num">03</div>
+                <h4>NEET Counselling</h4>
+                <p>We offer comprehensive support throughout the entire BAMS counselling process, from registration and
+                    choice filling to seat allotment and beyond.
+                </p>
+            </div>
+            <div class="feature">
+                <div class="feature-num">04</div>
+                <h4>Scholarships</h4>
+                <p>We'll help you find institutional, government, and corporate scholarships available for BAMS
+                    students, thereby helping you jump over the obstacle of high fees for BAMS in Karnataka.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- COURSE DETAILS -->
+    <section class="course-section py-2" id="course">
+        <div class="section-header reveal">
+            <span class="section-num">02 / Course Details</span>
+            <h2 class="section-title mb-4">BAMS Course Details</h2>
+            <p style="font-size: 16px;">
+                Ayurveda, one of India’s oldest systems of medicine, focuses on preventing and treating illnesses
+                through natural remedies, with herbal medicine being a key component. Traditionally, this knowledge was
+                imparted to students of noble families through the gurukul system. Today, this time-honoured science is
+                taught through specialised academic programmes offered by several leading Ayurvedic colleges in
+                Karnataka.
+
+                Among these programmes, the Bachelor of Ayurvedic Medicine and Surgery (BAMS) is the most sought-after
+                undergraduate course in Ayurvedic education in India. Now, if you are planning to pursue BAMS after
+                NEET, it is important to understand the fundamentals of the course before beginning the admission
+                process.
+            </p>
+        </div>
+        <div class="table-wrap reveal mx-5">
+            <div class="table-row">
+                <div class="table-key">Course Name</div>
+                <div class="table-val"><strong>Bachelor of Ayurvedic Medicine and Surgery (BAMS)</strong></div>
+            </div>
+            <div class="table-row">
+                <div class="table-key">Level</div>
+                <div class="table-val">Undergraduate (UG)</div>
+            </div>
+            <div class="table-row">
+                <div class="table-key">Duration</div>
+                <div class="table-val"><strong>5.5 Years</strong> — 4.5 Years Academic + 1 Year Internship</div>
+            </div>
+            <div class="table-row">
+                <div class="table-key">Entrance Exam</div>
+                <div class="table-val">NEET-UG</div>
+            </div>
+            <div class="table-row">
+                <div class="table-key">Eligibility</div>
+                <div class="table-val">
+                    <ul>
+                        <li>10+2 / 2nd PU with 50% Aggregate in PCB / Biotechnology & English</li>
+                        <li>Qualified NEET-UG entrance examination</li>
+                        <li>Minimum 17 years of age as of Dec 31st of admission year</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="table-row">
+                <div class="table-key">Regulatory Body</div>
+                <div class="table-val">NCISM under the Ministry of AYUSH, Government of India</div>
+            </div>
+        </div>
+    </section>
+
+
+    <style>
+        :root {
+            --ink: #0A0A0A;
+            --ink2: #1A1A1A;
+            --green: #266b47;
+            --green-light: #2e4237;
+            --gold: #C8A94A;
+            --cream: #F5F0E8;
+            --white: #FFFFFF;
+            --muted: #888;
+            --line: rgba(0, 0, 0, 0.08);
+        }
+
+
+
+        .banner-container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .banner {
+            margin-top: 30px;
+            position: relative;
+            background: linear-gradient(135deg, var(--green) 0%, var(--green-light) 100%);
+            border-radius: 16px;
+            padding: 1rem 1rem;
+            box-shadow:
+                0 4px 6px rgba(0, 0, 0, 0.05),
+                0 10px 25px rgba(26, 92, 58, 0.15);
+            overflow: hidden;
+        }
+
+        .banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(200, 169, 74, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .banner::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: var(--white);
+            font-size: clamp(1.5rem, 4vw, 1.15rem);
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .highlight {
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #E63946 0%, #C62E3A 100%);
+            color: var(--white);
+            padding: 0.7rem 2rem;
+            border-radius: 5px;
+            font-size: 1.125rem;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow:
+                0 4px 15px rgba(230, 57, 70, 0.3),
+                0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
+            cursor: pointer;
+            letter-spacing: 0.01em;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow:
+                0 6px 20px rgba(230, 57, 70, 0.4),
+                0 4px 8px rgba(0, 0, 0, 0.25);
+            background: linear-gradient(135deg, #F04450 0%, #D63844 100%);
+        }
+
+        .cta-button:active {
+            transform: translateY(0);
+        }
+
+        /* Decorative elements */
+        .accent-line {
+            width: 60px;
+            height: 3px;
+            background: var(--gold);
+            margin: 0 auto 1.5rem;
+            border-radius: 2px;
+        }
+
+        /* Tablet */
+        @media (max-width: 768px) {
+            .banner {
+                padding: 3rem 2rem;
+                border-radius: 12px;
+            }
+
+            h1 {
+                margin-bottom: 2rem;
+            }
+
+            .cta-button {
+                padding: 1rem 2.5rem;
+                font-size: 1rem;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 480px) {
+
+            .banner {
+                padding: 2.5rem 1.5rem;
+            }
+
+            h1 {
+                margin-bottom: 1.75rem;
+            }
+
+            .cta-button {
+                padding: 0.875rem 2rem;
+                font-size: 0.9375rem;
+                width: 100%;
+                max-width: 280px;
+            }
+
+            .accent-line {
+                width: 40px;
+                margin-bottom: 1.25rem;
+            }
+        }
+
+        .duration {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: fit-content;
+            /* only takes content width */
+            padding: 4px 18px;
+            background: #285a1d15;
+            border: 1px solid rgb(181, 234, 181);
+            color: #163d1d;
+            font-size: 14px;
+            font-weight: 700;
+            border-radius: 30px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+    </style>
+
+    <div class="banner-container">
+        <div class="banner">
+            <div class="content">
+                <div class="accent-line"></div>
+                <h1>
+                    Get Expert Guidance for the <span class="highlight">BAMS Counselling Process</span> and Stay Updated
+                    on Counselling Dates,
+                    Cut-Offs, Seat Allotment, and More!
+                </h1>
+                <a href="#" class="cta-button">Speak to a Counsellor</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- SUBJECTS -->
+    <section class="subjects-section">
+        <div class="section-header reveal">
+            <span class="section-num">03 / Curriculum</span>
+            <h2 class="section-title">BAMS Course Subjects</h2>
+
+            <p style="font-size: 16px;">
+                The BAMS course in India spans 5.5 years, comprising 4.5 years of academic
+                study followed by 1 year of compulsory internship training. The curriculum is
+                designed with a balanced approach, thereby integrating both theoretical learning
+                and hands-on clinical exposure. This enables students to develop a strong
+                foundation in Ayurvedic medicine while preparing them to become skilled and
+                service-oriented healthcare professionals.
+            </p>
+        </div>
+
+        <div class="years-grid reveal">
+
+            <!-- 1st Professional -->
+            <div class="year-col">
+                <span class="year-label">
+                    <span class="year-number">1st</span> Professional
+                </span>
+
+                <div class="duration">18 Months</div>
+
+                <div class="subject-item">Sanskritam evam Ayurveda Itihasa</div>
+                <div class="subject-item">Padartha Vijnanam</div>
+                <div class="subject-item">Kriya Sharira</div>
+                <div class="subject-item">Samhita Adhyayan – I</div>
+
+                <a href="#" class="know-more-btn">Know More</a>
+            </div>
+
+            <!-- 2nd Professional -->
+            <div class="year-col">
+                <span class="year-label">
+                    <span class="year-number">2nd</span> Professional
+                </span>
+
+                <div class="duration">18 Months</div>
+
+                <div class="subject-item">Dravyaguna Vigyana</div>
+                <div class="subject-item">Rasashastra evam Bhaishajya Kalpana</div>
+                <div class="subject-item">Roga Nidana evam Vikriti Vigyana</div>
+                <div class="subject-item">Agad Tantra evam Vidhi Vaidyaka</div>
+                <div class="subject-item">Swasthavritta evam Yoga</div>
+                <div class="subject-item">Samhita Adhyayan – II</div>
+
+                <a href="#" class="know-more-btn">Know More</a>
+            </div>
+
+            <!-- Final Professional -->
+            <div class="year-col">
+                <span class="year-label">
+                    <span class="year-number">Final</span> Professional
+                </span>
+
+                <div class="duration">18 Months</div>
+
+                <div class="subject-item">Kayachikitsa</div>
+                <div class="subject-item">Panchakarma</div>
+                <div class="subject-item">Shalya Tantra</div>
+                <div class="subject-item">Shalakya Tantra</div>
+                <div class="subject-item">Prasuti Tantra evam Stri Roga</div>
+                <div class="subject-item">Kaumarabhritya</div>
+                <div class="subject-item">Research Methodology & Medical Statistics</div>
+                <div class="subject-item">Emergency Medicine</div>
+                <div class="subject-item">Samhita Adhyayan – III</div>
+
+                <a href="#" class="know-more-btn">Know More</a>
+            </div>
+
+            <!-- Internship -->
+            <div class="year-col">
+                <span class="year-label">
+                    <span class="year-number fs-6">Compulsory Rotatory</span> Internship
+                </span>
+
+                <div class="duration">12 Months</div>
+
+                <div class="subject-item">Kayachikitsa (General Medicine)</div>
+                <div class="subject-item">Panchakarma</div>
+                <div class="subject-item">Shalya Tantra (Surgery)</div>
+                <div class="subject-item">Shalakya Tantra (ENT, Eye & Dental)</div>
+                <div class="subject-item">Prasuti Tantra & Stri Roga</div>
+                <div class="subject-item">Kaumarabhritya (Pediatrics)</div>
+                <div class="subject-item">Swasthavritta</div>
+                <div class="subject-item">Community Health / Rural Posting</div>
+                <div class="subject-item">OPD & IPD Clinical Exposure</div>
+                <div class="subject-item">Emergency & Clinical Case Management</div>
+
+                <a href="#" class="know-more-btn">Know More</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SCOPE -->
+    <section class="scope-section" id="scope">
+        <div class="section-header reveal">
+            <span class="section-num">04 / Career Scope</span>
+            <h2 class="section-title mb-5">Scope After BAMS</h2>
+            <p style="font-size: 16px;">A BAMS degree opens the door to diverse career opportunities across multiple
+                sectors. While the healthcare industry remains the primary career pathway for BAMS graduates,
+                opportunities also extend to the education sector, pharmaceutical industry, medical tourism, research,
+                and other allied fields. Moreover, graduating from one of the leading BAMS colleges in Karnataka can
+                provide students with the academic foundation and practical exposure needed to build a successful and
+                rewarding career.
+            </p>
+        </div>
+        <div class="scope-grid reveal">
+            <div class="scope-item">
+                <div class="scope-icon-wrap"><i class="fa-solid fa-briefcase-medical"></i></div>
+                <h5>Set Up Your Own Practice</h5>
+            </div>
+            <div class="scope-item">
+                <div class="scope-icon-wrap"><i class="fa-solid fa-spa"></i></div>
+                <h5>Work in Ayurvedic & Health Resorts</h5>
+            </div>
+            <div class="scope-item">
+                <div class="scope-icon-wrap"><i class="fa-solid fa-building"></i></div>
+                <h5>Explore Well-Paying Jobs in Government/ Private Sector</h5>
+            </div>
+
+            <div class="scope-item">
+                <div class="scope-icon-wrap"><i class="fa-solid fa-microscope"></i></div>
+                <h5>Get involved in Clinical Research </h5>
+            </div>
+            <div class="scope-item">
+                <div class="scope-icon-wrap"><i class="fa-solid fa-user-graduate"></i></div>
+                <h5>Pursue Higher Education by Specialising in Ayurveda through an MD/ MS or PG Diploma Course</h5>
+            </div>
+            <div class="scope-item">
+                <div class="scope-icon-wrap"><i class="fa-solid fa-chalkboard-user"></i></div>
+                <h5>Pursue a Career in the Field of Academics</h5>
+            </div>
+        </div>
+    </section>
+
+    <!-- ADMISSIONS -->
+    <section class="admission-section" id="admissions">
+        <div class="section-header reveal">
+            <span class="section-num">05 / Admissions</span>
+            <h2 class="section-title">BAMS Admission Process</h2>
+        </div>
+        <div class="process-grid reveal">
+            <div class="process-card">
+                <div class="process-head">
+                    <div class="process-num">01</div>
+                    <h4>Entrance Examination</h4>
+                </div>
+                <p>Students aspiring to pursue Ayurvedic courses in Bangalore or elsewhere in India must qualify the
+                    National Eligibility-cum-Entrance Test for Undergraduates (NEET-UG) as a mandatory requirement for
+                    BAMS admission. In addition, candidates must have completed their 10+2/ 2nd PUC or equivalent
+                    examination with Physics, Chemistry, Biology/ Biotechnology, and English as compulsory subjects,
+                    securing the minimum qualifying aggregate marks prescribed for their respective category, generally
+                    ranging between 40% and 50%.
+                </p>
+            </div>
+            <style>
+                /* Wrapper */
+                .process-head {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    margin-bottom: 1rem;
+                }
+
+                /* Number */
+                .process-num {
+                    font-size: 5rem;
+                    /* reduce from 5rem */
+                    font-weight: 700;
+                    color: rgba(0, 0, 0, 0.2);
+                    letter-spacing: -1px;
+                    line-height: 1;
+                    margin: 0;
+                }
+
+                /* Title */
+                .process-card h4 {
+                    font-size: 30px;
+                    font-weight: 500;
+                    margin: 0;
+                }
+            </style>
+            <div class="process-card">
+                <div class="process-head">
+                    <div class="process-num">02</div>
+                    <h4>Counselling Process</h4>
+                </div>
+                <p>Candidates who qualify NEET-UG must subsequently participate in the BAMS counselling process, through
+                    which seats are allocated at both the All India and state levels. The All India counselling process
+                    is conducted by the AYUSH Admissions Central Counselling Committee (AACCC) for admission to
+                    Ayurvedic colleges across the country. State-level counselling, on the other hand, is administered
+                    by the respective state counselling authorities for admissions within their jurisdiction. For
+                    admission to BAMS colleges in Karnataka, the state counselling process is conducted by the Karnataka
+                    Examinations Authority (KEA).
+                </p>
+            </div>
+        </div>
+        <p class="text-center" style="font-size: 16px;">After securing a seat, candidates will have to report at the
+            allotted college and
+            submit the documents listed below to complete the BAMS admission process.</p>
+
+
+
+        <h4 class="reveal"
+            style="font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:600;letter-spacing:1px;color:var(--ink);margin-bottom:1.5rem;text-align:center;">
+            Documents Required for BAMS Admission 2026-27</h4>
+        <div class="docs-grid reveal">
+            <div class="docs-col">
+                <div class="doc-item">10th Marksheet / Certificate</div>
+                <div class="doc-item">12th Marksheet / Passing Certificate</div>
+                <div class="doc-item">Transfer Certificate</div>
+                <div class="doc-item">Migration Certificate (if applicable)</div>
+                <div class="doc-item">NEET-UG Admit Card</div>
+                <div class="doc-item">NEET-UG Scorecard / Rank Letter</div>
+                <div class="doc-item">NEET-UG Application Form / Confirmation Page</div>
+                <div class="doc-item">Seat Allotment Letter</div>
+                <div class="doc-item">Valid Government-issued ID Proof</div>
+            </div>
+
+            <div class="docs-col">
+                <div class="doc-item">Character Certificate</div>
+                <div class="doc-item">Medical Fitness Certificate</div>
+                <div class="doc-item">Recent Passport-size Photographs</div>
+                <div class="doc-item">Caste Certificate (if applicable)</div>
+                <div class="doc-item">Income Certificate (if applicable)</div>
+                <div class="doc-item">EWS Certificate (if applicable)</div>
+                <div class="doc-item">PwD Certificate (if applicable)</div>
+                <div class="doc-item">Domicile Certificate (if applicable)</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COLLEGES -->
+    <section class="colleges-section" id="colleges">
+        <div class="section-header reveal">
+            <span class="section-num">06 / Institutions</span>
+            <h2 class="section-title mb-4">Top Ayurvedic Colleges in Karnataka</h2>
+            <p style="font-size: 16px;">Pursuing Ayurvedic education at leading BAMS colleges in Karnataka offers
+                several advantages for aspiring students. From receiving quality education under the guidance of
+                experienced faculty with affordable BAMS course fees to gaining access to modern infrastructure,
+                well-equipped laboratories, and clinical training facilities, students benefit from an environment that
+                supports both academic and professional growth. With 50+ Ayurvedic colleges across the state including
+                BAMS colleges Bangalore, aspirants can choose from government, government-aided, deemed, and private
+                institutions, allowing them to select a college that best aligns with their academic goals and career
+                aspirations in Ayurveda.
+
+            </p>
+        </div>
+        <div class="colleges-list reveal">
+            <div class="college-row">
+                <div class="college-info">
+                    <img src="college-logo/KAHER’s Shri BM Kankanawadi Ayurveda Mahavidyalaya Post Graduate Studies and Research Centre.webp"
+                        class="college-logo" alt="">
+                    <div class="college-text">
+                        <div class="college-name">KAHER's Shri BM Kankanawadi Ayurveda Mahavidyalaya Post Graduate
+                            Studies and Research Centre
+                        </div>
+                        <div class="college-city"><i class="fas fa-map-marker-alt"></i> Belagavi</div>
+                    </div>
+                </div>
+                <a href="#contact" class="btn-enquire">Enquire Now ></a>
+            </div>
+            <div class="college-row">
+                <div class="college-info">
+                    <img src="college-logo/Yenepoya Ayurveda Medical College and Hospital.webp" class="college-logo"
+                        alt="">
+                    <div class="college-text">
+                        <div class="college-name">Yenepoya Ayurveda Medical College and Hospital</div>
+                        <div class="college-city"><i class="fas fa-map-marker-alt"></i> Mangalore</div>
+                    </div>
+                </div>
+                <a href="#contact" class="btn-enquire">Enquire Now ></a>
+            </div>
+            <div class="college-row">
+                <div class="college-info">
+                    <img src="college-logo/Amrutha Ayurvedic Medical College (AAMC).webp" class="college-logo" alt="">
+                    <div class="college-text">
+                        <div class="college-name">Amrutha Ayurvedic Medical College (AAMC)</div>
+                        <div class="college-city"><i class="fas fa-map-marker-alt"></i>Chithradurga</div>
+                    </div>
+                </div>
+                <a href="#contact" class="btn-enquire">Enquire Now ></a>
+            </div>
+            <div class="college-row">
+                <div class="college-info">
+                    <img src="college-logo/Sri Kalabyraveshwara Swamy Ayurvedic Medical College, Hospital and Research Centre (SKAMCH & RC).webp"
+                        class="college-logo" alt="">
+                    <div class="college-text">
+                        <div class="college-name">Sri Sri College of Ayurvedic Science and Research</div>
+                        <div class="college-city"><i class="fas fa-map-marker-alt"></i>Bangalore</div>
+                    </div>
+                </div>
+                <a href="#contact" class="btn-enquire">Enquire Now ></a>
+            </div>
+            <div class="college-row">
+                <div class="college-info">
+                    <img src="college-logo/Sharada Ayurveda Medical College and Hospital (SAMCH).webp"
+                        class="college-logo" alt="">
+                    <div class="college-text">
+                        <div class="college-name">Sharada Ayurveda Medical College and Hospital (SAMCH)</div>
+                        <div class="college-city"><i class="fas fa-map-marker-alt"></i>Mangalore</div>
+                    </div>
+                </div>
+                <a href="#contact" class="btn-enquire">Enquire Now ></a>
+            </div>
+            <div class="college-row">
+                <div class="college-info">
+                    <img src="college-logo/Sushrutha Ayurvedic Medical College & Hospital.webp" class="college-logo"
+                        alt="">
+                    <div class="college-text">
+                        <div class="college-name">Sushrutha Ayurvedic Medical College & Hospital</div>
+                        <div class="college-city"><i class="fas fa-map-marker-alt"></i>Bangalore</div>
+                    </div>
+                </div>
+                <a href="#contact" class="btn-enquire">Enquire Now ></a>
+            </div>
+            <div class="college-row">
+                <div class="college-info">
+                    <img src="college-logo/Ashwini Ayurvedic Medical College & Research Centre.webp"
+                        class="college-logo" alt="">
+                    <div class="college-text">
+                        <div class="college-name">Ashwini Ayurvedic Medical College & Research Centre</div>
+                        <div class="college-city"><i class="fas fa-map-marker-alt"></i>Tumkur</div>
+                    </div>
+                </div>
+                <a href="#contact" class="btn-enquire">Enquire Now ></a>
+            </div>
+            <div class="college-row">
+                <div class="college-info">
+                    <img src="college-logo/SDM College of Ayurveda & Hospital.webp" class="college-logo" alt="">
+                    <div class="college-text">
+                        <div class="college-name">SDM College of Ayurveda & Hospital</div>
+                        <div class="college-city"><i class="fas fa-map-marker-alt"></i>Hassan</div>
+                    </div>
+                </div>
+                <a href="#contact" class="btn-enquire">Enquire Now ></a>
+            </div>
+            <div class="college-row">
+                <div class="college-info">
+                    <img src="college-logo/Atreya Ayurvedic Medical College Hospital & Research Centre.webp"
+                        class="college-logo" alt="">
+                    <div class="college-text">
+                        <div class="college-name">Atreya Ayurvedic Medical College Hospital & Research Centre</div>
+                        <div class="college-city"><i class="fas fa-map-marker-alt"></i>Bangalore</div>
+                    </div>
+                </div>
+                <a href="#contact" class="btn-enquire">Enquire Now ></a>
+            </div>
+            <div class="college-row">
+                <div class="college-info">
+                    <img src="college-logo/Shri Kalidas Ayurvedic Medical College and Hospital.webp"
+                        class="college-logo" alt="">
+                    <div class="college-text">
+                        <div class="college-name">Shri Kalidas Ayurvedic Medical College and Hospital</div>
+                        <div class="college-city"><i class="fas fa-map-marker-alt"></i>Badami</div>
+                    </div>
+                </div>
+                <a href="#contact" class="btn-enquire">Enquire Now ></a>
+            </div>
+            <div class="college-row">
+                <div class="college-info">
+                    <img src="college-logo/Indian Institute of Ayurvedic Medicine & Research.webp" class="college-logo"
+                        alt="">
+                    <div class="college-text">
+                        <div class="college-name">Indian Institute of Ayurvedic Medicine & Research (IIAMR)</div>
+                        <div class="college-city"><i class="fas fa-map-marker-alt"></i>Bangalore</div>
+                    </div>
+                </div>
+                <a href="#contact" class="btn-enquire">Enquire Now ></a>
+            </div>
+            <div class="college-row">
+                <div class="college-info">
+                    <img src="college-logo/JSS Ayurveda Medical College.webp" class="college-logo" alt="">
+                    <div class="college-text">
+                        <div class="college-name">JSS Ayurveda Medical College</div>
+                        <div class="college-city"><i class="fas fa-map-marker-alt"></i>Mysore</div>
+                    </div>
+                </div>
+                <a href="#contact" class="btn-enquire">Enquire Now ></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="sec sec-cream" id="faq">
+        <div class="container-xl">
+            <div class="row g-5 reveal">
+                <!-- LEFT: Big heading -->
+                <div class="col-lg-4 faq-left-col">
+                    <span class="faq-sec-label">07 / FAQ</span>
+                    <h2 class="faq-big-title">
+                        Frequently<br>
+                        Asked<br>
+                        <!-- <span class="faq-q-icon">
+                           <i class="bi bi-mortarboard-fill"></i>
+                        </span> -->Questions
+                    </h2>
+                    <style>
+                        .faq-big-title {
+                            font-size: clamp(2.5rem, 5vw, 4.5rem);
+                            font-weight: 800;
+                            line-height: 1.05;
+                            letter-spacing: -1px;
+                        }
+
+                        .faq-q-icon {
+                            display: inline-flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 1em;
+                            height: 1em;
+                            margin-right: 2px;
+                        }
+
+                        .faq-q-icon i {
+                            font-size: 0.9em;
+                            /* match text */
+                            color: #0B3D2E;
+                        }
+                    </style>
+                </div>
+                <!-- RIGHT: Accordion -->
+                <div class="col-lg-8">
+                    <div class="faq-item">
+                        <div class="faq-q">
+                            <h5>What is BAMS course duration?</h5>
+                            <div class="faq-toggle">+</div>
+                        </div>
+                        <div class="faq-a">
+                            <p>The BAMS course duration is 5.5 years. This undergraduate programme has 4.5 years of
+                                academic studies followed by a 1-year mandatory internship.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q">
+                            <h5>What is the BAMS course eligibility criteria?
+                            </h5>
+                            <div class="faq-toggle">+</div>
+                        </div>
+                        <div class="faq-a">
+                            <p>Candidates must have completed their 10+2/ 2nd PU/ equivalent with English as one of the
+                                subjects and must have obtained a minimum aggregate of 40-50% (based on the category of
+                                candidate) in Physics, Chemistry & Biology. Candidates must also clear the NEET-UG
+                                entrance exam.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q">
+                            <h5>Is NEET mandatory for BAMS admission in Karnataka?</h5>
+                            <div class="faq-toggle">+</div>
+                        </div>
+                        <div class="faq-a">
+                            <p>Yes, qualifying NEET-UG is mandatory for admission to BAMS colleges in Karnataka as well
+                                as across India. Candidates must secure the minimum qualifying percentile prescribed for
+                                their category to participate in the counselling process.
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q">
+                            <h5>What is the counselling process for BAMS admission in Karnataka?</h5>
+                            <div class="faq-toggle">+</div>
+                        </div>
+                        <div class="faq-a">
+                            <p>BAMS admission in Karnataka is conducted through both All India and state-level
+                                counselling. The All India counselling process is managed by AACCC, while Karnataka
+                                state counselling for BAMS admissions is conducted by the Karnataka Examinations
+                                Authority (KEA).
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q">
+                            <h5>What career opportunities are available after completing BAMS?</h5>
+                            <div class="faq-toggle">+</div>
+                        </div>
+                        <div class="faq-a">
+                            <p>After completing BAMS, graduates can explore career opportunities in clinical practice,
+                                Ayurvedic hospitals, wellness centres, pharmaceuticals, research, medical tourism,
+                                academics, and healthcare administration. Many students also pursue postgraduate studies
+                                for advanced studies.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="cta-section reveal">
+        <div class="cta-text text-start">
+
+            <h2>BAMS seat at the Top Ayurvedic Colleges in Karnataka For the A.Y. 2026-27</h2>
+
+        </div>
+        <a href="#home" class="btn-cta">Apply Now</a>
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+        <div class="footer-top">
+
+            <!-- LEFT LOGO -->
+            <div class="footer-left">
+                <a href="#" class="footer-logo">
+                    <img src="media/BangaloreStudy_WLogo.svg" alt="BangaloreStudy Logo">
+                </a>
+            </div>
+
+            <!-- RIGHT CONTACT -->
+            <!-- RIGHT CONTACT -->
+            <div class="footer-contact">
+                <h5>Connect With Us</h5>
+
+                <!-- FIRST 2 NUMBERS -->
+                <div class="contact-row">
+                    <a href="tel:08022454991" class="contact-link">
+                        <span class="icon">📞</span>
+                        <span>080-22454991</span>
+                    </a>
+
+                    <span class="comma">,</span>
+
+                    <a href="tel:08026631169" class="contact-link">
+                        <span>080-26631169</span>
+                    </a>
+                </div>
+
+                <!-- NEXT 2 NUMBERS -->
+                <div class="contact-row">
+                    <a href="tel:09036020076" class="contact-link">
+                        <span class="icon">📱</span>
+                        <span>+91 90360 20076</span>
+                    </a>
+
+                    <span class="comma">,</span>
+
+                    <a href="tel:18001208696" class="contact-link">
+                        <span>1800 120 8696 — Toll Free</span>
+                    </a>
+                </div>
+
+                <!-- DUBAI -->
+                <a href="tel:+971 502436552" class="contact-link">
+                    <span class="icon">🌍</span>
+                    <span>+971 502436552 (Dubai)</span>
+                </a>
+                <!-- SOCIAL ICONS -->
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" aria-label="X">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+
+                    <a href="#" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+
+                    <a href="#" aria-label="Pinterest">
+                        <i class="fab fa-pinterest-p"></i>
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+    </footer>
+
+    <style>
+        /* SOCIAL ICONS */
+        .social-icons {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-top: 20px;
+            flex-wrap: nowrap;
+            /* keeps all icons in one row */
+        }
+
+        .social-icons a {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #f3f3f3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #145921;
+            font-size: 17px;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background: #145921;
+            color: #fff;
+            transform: translateY(-4px);
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+            .social-icons {
+                justify-content: flex-start;
+                gap: 10px;
+            }
+
+            .social-icons a {
+                width: 38px;
+                height: 38px;
+                font-size: 15px;
+            }
+        }
+
+        /* FOOTER */
+        #contact {
+            padding: 40px;
+            background:
+                linear-gradient(rgba(255, 255, 255, 0.894),
+                    rgba(255, 255, 255, 0.894)),
+                url('media/ChatGPT Image Apr 23, 2026, 10_52_29 AM.png');
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 60px;
+        }
+
+        /* LEFT */
+        .footer-left {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+        }
+
+        .footer-logo img {
+            height: 95px;
+            width: auto;
+            display: block;
+        }
+
+        /* RIGHT */
+        .footer-contact {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        .footer-contact h5 {
+            color: var(--green);
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* ROW */
+        .contact-row {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 14px;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #000;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s ease;
+        }
+
+        .contact-link:hover {
+            color: #145921;
+        }
+
+        .comma {
+            margin: 0 8px;
+            color: #000;
+            font-size: 16px;
+        }
+
+        .icon {
+            font-size: 16px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+
+            .footer-top {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 40px;
+            }
+
+            .footer-left {
+                width: 100%;
+                justify-content: flex-start;
+            }
+
+            .footer-contact {
+                width: 100%;
+                align-items: flex-start;
+                text-align: left;
+            }
+
+            .footer-logo img {
+                height: 75px;
+            }
+
+            .contact-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            .comma {
+                display: none;
+            }
+        }
+    </style>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // NAV SCROLL
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        /* NAV SCROLL */
+        window.addEventListener('scroll', () => {
+            document.getElementById('navbar')
+                .classList.toggle('solid', window.scrollY > 60);
+        });
+
+        /* SMOOTH SCROLL */
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+
+                const t = document.querySelector(a.getAttribute('href'));
+
+                if (t) {
+                    e.preventDefault();
+
+                    t.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+
+                    navMenu.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                }
+            });
+        });
+
+        // SCROLL REVEAL
+        const ro = new IntersectionObserver(entries => {
+            entries.forEach(en => {
+                if (en.isIntersecting) { en.target.classList.add('revealed'); ro.unobserve(en.target); }
+            });
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+
+        // COUNTER ANIMATION
+        function animateCounter(el) {
+            const target = +el.dataset.target;
+            const dur = 1800; const step = dur / 60;
+            let current = 0; const inc = target / 60;
+            const timer = setInterval(() => {
+                current += inc;
+                if (current >= target) { current = target; clearInterval(timer); }
+                el.textContent = Math.floor(current);
+            }, step);
+        }
+        const cro = new IntersectionObserver(entries => {
+            entries.forEach(en => {
+                if (en.isIntersecting) {
+                    en.target.querySelectorAll('.stat-num[data-target]').forEach(animateCounter);
+                    cro.unobserve(en.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        const statsBar = document.querySelector('.stats-bar');
+        if (statsBar) cro.observe(statsBar);
+
+        // FAQ ACCORDION
+        document.querySelectorAll('.faq-q').forEach(q => {
+            q.addEventListener('click', () => {
+                const item = q.parentElement;
+                const isOpen = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                if (!isOpen) item.classList.add('active');
+            });
+        });
+
+        // FORM SUBMIT
+        document.getElementById('admissionForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const btn = this.querySelector('.btn-submit');
+            btn.textContent = 'Submitted ✓';
+            btn.style.background = '#2A7A50'; btn.style.color = '#fff';
+            setTimeout(() => {
+                btn.textContent = 'Submit Enquiry';
+                btn.style.background = ''; btn.style.color = '';
+                this.reset();
+            }, 3000);
+        });
+
+        // STAGGER ANIMATIONS
+        const stagger = new IntersectionObserver(entries => {
+            entries.forEach(en => {
+                if (en.isIntersecting) {
+                    en.target.querySelectorAll('.feature,.year-col,.scope-item').forEach((el, i) => {
+                        el.style.transitionDelay = i * 0.07 + 's';
+                        el.style.opacity = '1'; el.style.transform = 'none';
+                    });
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.features-grid,.years-grid,.scope-grid').forEach(g => {
+            g.querySelectorAll('.feature,.year-col,.scope-item').forEach(el => {
+                el.style.opacity = '0'; el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease,transform 0.6s cubic-bezier(0.16,1,0.3,1)';
+            });
+            stagger.observe(g);
+        });
+    </script>
+    <script>
+        const cards = document.querySelectorAll('.college-row');
+
+        function checkCards() {
+            const triggerPoint = window.innerHeight * 0.55;
+
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                const cardCenter = rect.top + rect.height / 2;
+
+                if (
+                    cardCenter > triggerPoint - 120 &&
+                    cardCenter < triggerPoint + 120
+                ) {
+                    card.classList.add('active-card');
+                } else {
+                    card.classList.remove('active-card');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkCards);
+        window.addEventListener('load', checkCards);
+    </script>
+</body>
+
+</html>
