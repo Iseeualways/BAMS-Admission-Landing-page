@@ -172,7 +172,7 @@
                 position: fixed;
                 top: 0;
                 right: -100%;
-                width: 85%;
+                width: 90%;
                 height: 100vh;
                 background: rgba(255, 255, 255, 0.96);
                 backdrop-filter: blur(24px);
@@ -200,12 +200,28 @@
             }
 
             .nav-links a {
-                font-size: 1.8rem;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                font-size: 1.2rem;
                 font-weight: 600;
                 letter-spacing: -1px;
+
                 transform: translateX(60px);
                 opacity: 0;
                 transition: all 0.6s ease;
+            }
+
+            .nav-links a::before {
+                content: '➤';
+                color: #004a0e;
+                font-size: 0.9rem;
+                line-height: 1;
+
+                transform: translateY(1px);
+
+                opacity: 0.7;
             }
 
             /* STAGGER ANIMATION */
@@ -259,7 +275,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: 6rem 4rem 3rem 1rem;
+            padding: 4rem 4rem 3rem 1rem;
             position: relative;
             z-index: 1;
         }
@@ -285,9 +301,9 @@
 
         .hero h1 {
             font-family: 'Poppins', sans-serif;
-            font-size: clamp(3rem, 5.5vw, 5.5rem);
+            font-size: clamp(3rem, 5.5vw, 4.9rem);
             font-weight: 800;
-            line-height: 0.95;
+            line-height: 1.1;
             letter-spacing: -3px;
             color: var(--cream);
             margin-bottom: 2rem;
@@ -367,86 +383,105 @@
             color: var(--ink);
         }
 
-        /* ===== HERO RIGHT / FORM ===== */
-        /* .hero-right {
-    background: #f7f7f700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 6rem 2rem;
-} */
-
-        .hero-right::before {
-            display: none;
-        }
-
         .form-wrap {
             width: 100%;
-            margin-top: 50px !important;
+            margin-top: 20px !important;
             max-width: 500px;
-            background: #ffffff;
-            padding: 2.5rem;
-            border-radius: 14px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+            background: rgba(255, 255, 255, 0.7);
+            padding: 1.4rem 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(18px);
+
+            border: 1px solid rgba(255, 255, 255, 0.5);
+
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.08),
+                inset 0 1px 1px rgba(255, 255, 255, 0.8);
         }
 
         .form-wrap h3 {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             font-weight: 700;
             color: #111;
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.7rem;
+            text-align: center;
         }
 
         .form-wrap>p {
-            font-size: 0.9rem;
-            color: #777;
+            font-size: 0.95rem;
+            color: #666;
             margin-bottom: 2rem;
         }
 
+        /* FIELD */
         .field {
-            margin-bottom: 1.2rem;
+            margin-bottom: 1.3rem;
             position: relative;
         }
 
+        /* MODERN INPUT */
         .field input,
         .field select {
             width: 100%;
-            background: transparent;
-            border: none;
-            border-bottom: 1px solid #e5e5e5;
-            padding: 0.9rem 0;
-            color: #111;
+            height: 50px;
+            background: #f6f8fb;
+            border: 1px solid transparent;
+            border-radius: 9px;
+            padding: 0 20px;
             font-size: 0.95rem;
+            font-weight: 500;
+            color: #111;
             outline: none;
-            transition: border-color 0.3s ease;
+            transition: all 0.3s ease;
+            box-shadow:
+                inset 0 2px 4px rgba(255, 255, 255, 0.8),
+                inset 0 -2px 6px rgba(0, 0, 0, 0.03);
         }
 
+        /* PLACEHOLDER */
         .field input::placeholder {
-            color: #3d3d3d;
+            color: #434343;
         }
 
+        /* FOCUS */
         .field input:focus,
         .field select:focus {
+            background: #fff;
             border-color: #0B3D2E;
-            /* your green */
+
+
         }
 
+        /* BUTTON */
         .btn-submit {
             width: 100%;
-            margin-top: 1.5rem;
-            background: #111;
+            margin-top: 0.1rem;
+
+            height: 58px;
+
+            background: linear-gradient(135deg, #111, #0B3D2E);
             color: #fff;
-            padding: 1rem;
-            font-weight: 600;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-            border-radius: 6px;
+
             border: none;
+            border-radius: 10px;
+
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+
+            cursor: pointer;
+
             transition: all 0.3s ease;
+
+            box-shadow:
+                0 15px 30px rgba(11, 61, 46, 0.15);
         }
 
         .btn-submit:hover {
-            background: #0B3D2E;
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 20px 40px rgba(11, 61, 46, 0.2);
         }
 
         /* ===== MARQUEE ===== */
@@ -2674,8 +2709,8 @@
         <div class="hero-left">
             <div class="hero-tag"><span></span> Karnataka 2026–27</div>
             <h1>
-                <span class="line">BAMS Course Admissions</span>
-                <span class="line">in Karnataka</span>
+                <span class="line">BAMS Course Admissions </span>
+                <span class="line"></span>
                 <span class="line hero-accent">2026–27</span>
             </h1>
             <p>Build a successful career in Ayurveda by securing admission to top BAMS colleges in Karnataka and
@@ -2684,14 +2719,17 @@
                 <a href="#admissions" class="btn-main">Connect With Our Experts</a>
                 <a href="#course" class="btn-ghost text-white">Explore Course <span>→</span></a>
             </div>
+
         </div>
+
         <div class="hero-right">
             <div class="form-wrap">
                 <h3>Fill Out the Form & Get Assistance With the 2026-27 BAMS Admission</h3>
                 <form id="admissionForm">
                     <div class="field"><input type="text" placeholder="Full Name:" required></div>
                     <div class="field"><input type="email" placeholder="Email ID:" required></div>
-                    <div class="field"><input type="tel" placeholder="Phone NO:" required></div>
+                    <div class="field"><input type="tel" placeholder="Contact No:" required></div>
+                    <div class="field"><input type="text" placeholder="NEET Score"></div>
                     <div class="field">
                         <select required>
                             <option value="">Select State</option>
@@ -2708,8 +2746,8 @@
                             <option>Other</option>
                         </select>
                     </div>
-                    <div class="field"><input type="text" placeholder="NEET Score:"></div>
-                    <button type="submit" class="btn-submit">Submit Enquiry</button>
+                    <div class="field"><input type="text" placeholder="Message (Optional)"></div>
+                    <button type="submit" class="btn-submit">Submit</button>
                 </form>
             </div>
         </div>
@@ -3307,8 +3345,8 @@
         <div class="colleges-list reveal">
             <div class="college-row">
                 <div class="college-info">
-                    <img src="college-logo/Sri Kalabyraveshwara Swamy Ayurvedic Medical College, Hospital and Research Centre (SKAMCH & RC).webp"
-                        class="college-logo" alt="">
+
+                    <img src="college-logo/sscasrh-logo.png" class="college-logo" alt="">
                     <div class="college-text">
                         <div class="college-name">Sri Sri College of Ayurvedic Science and Research</div>
                         <div class="college-city"><i class="fas fa-map-marker-alt"></i>Bangalore</div>
@@ -3441,8 +3479,8 @@
             </div>
             <div class="college-row">
                 <div class="college-info">
-                    <img src="college-logo/sscasrh-logo.png" class="college-logo"
-                        alt="">
+                    <img src="college-logo/Sri Kalabyraveshwara Swamy Ayurvedic Medical College, Hospital and Research Centre (SKAMCH & RC).webp"
+                        class="college-logo" alt="">
                     <div class="college-text">
                         <div class="college-name">Sri Kalabyraveshwara Swamy Ayurvedic Medical College, Hospital and
                             Research Centre (SKAMCH & RC)</div>
