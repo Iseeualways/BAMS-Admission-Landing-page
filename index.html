@@ -257,6 +257,10 @@
             .nav-links.active li:nth-child(7) a {
                 transition-delay: 0.46s;
             }
+
+            .nav-links.active li:nth-child(8) a {
+                transition-delay: 0.51s;
+            }
         }
 
         /* ===== HERO ===== */
@@ -385,7 +389,7 @@
 
         .form-wrap {
             width: 100%;
-            margin-top: 20px !important;
+            margin-top: 50px !important;
             max-width: 500px;
             background: rgba(255, 255, 255, 0.7);
             padding: 1.4rem 2rem;
@@ -400,8 +404,8 @@
         }
 
         .form-wrap h3 {
-            font-size: 1.2rem;
-            font-weight: 700;
+            font-size: 1.1rem;
+            font-weight: 600;
             color: #111;
             margin-bottom: 0.7rem;
             text-align: center;
@@ -415,7 +419,7 @@
 
         /* FIELD */
         .field {
-            margin-bottom: 1.3rem;
+            margin-bottom: 1.1rem;
             position: relative;
         }
 
@@ -1371,6 +1375,19 @@
             background: #eef9f0;
             /* light green */
             padding-left: 1.4rem;
+        }
+
+        @media (max-width: 768px) {
+
+            .college-row:hover {
+                background: transparent;
+                padding-left: 1rem;
+            }
+
+            .college-row::before {
+                display: none;
+            }
+
         }
 
         .college-row:hover::before {
@@ -2621,7 +2638,7 @@
         /* Extra Small Mobile (max-width: 380px) */
         @media (max-width: 380px) {
             .hero h1 {
-                font-size: clamp(1.5rem, 14vw, 2rem);
+                font-size: clamp(1.5rem, 14vw, 3rem);
             }
 
             .section-title {
@@ -2692,7 +2709,7 @@
 
         <!-- DESKTOP + MOBILE MENU -->
         <ul class="nav-links" id="navMenu">
-            <li><a href="#hero">Home</a></li>
+            <li><a href="#home">Home</a></li>
             <li><a href="#why">Why Us</a></li>
             <li><a href="#course">Course</a></li>
             <li><a href="#scope">Scope</a></li>
