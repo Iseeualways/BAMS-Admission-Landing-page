@@ -709,6 +709,7 @@
             letter-spacing: 1px;
             color: var(--ink);
             display: flex;
+            justify-content: center;
             align-items: center;
             background: #b7dab6;
         }
@@ -1245,6 +1246,9 @@
             background-color: var(--white);
             grid-template-columns: 1fr 1fr;
             border: 1px solid var(--line);
+            max-width: 1000px;
+            /* reduce width */
+            margin: auto;
         }
 
         .docs-col {
@@ -1522,7 +1526,7 @@
             background: linear-gradient(135deg, rgb(0, 59, 9) 0%, rgba(0, 0, 0, 0.376) 60%),
                 url('media/212.jpg.jpeg') center/cover no-repeat;
             padding: 7rem 6rem;
-            display: flex;
+
             align-items: center;
             justify-content: space-between;
             gap: 4rem;
@@ -1537,14 +1541,15 @@
             font-weight: 800;
             letter-spacing: -2px;
             color: var(--white);
-            line-height: 1;
-            margin-bottom: 1rem;
-            text-align: start;
+            line-height: 1.3;
+            margin-bottom: 2.5rem;
+            text-align: center;
         }
 
         .cta-text p {
             font-size: 1rem;
-            color: rgba(255, 255, 255, 0.6);
+            color: rgb(255, 255, 255);
+            text-align: center;
         }
 
         .btn-cta {
@@ -2739,14 +2744,14 @@
         </div>
         <div class="stat-item">
             <div class="stat-number">
-                <span class="stat-num" data-target="5">0</span>
+                <span class="stat-num" data-target="25">0</span>
                 <span class="stat-symbol">+</span>
             </div>
             <span class="stat-label">Years of Experience</span>
         </div>
         <div class="stat-item">
             <div class="stat-number">
-                <span class="stat-num" data-target="1000">0</span>
+                <span class="stat-num" data-target="50000">0</span>
                 <span class="stat-symbol">+</span>
             </div>
             <span class="stat-label">Students Placed</span>
@@ -2765,7 +2770,7 @@
     <section class="why-us" id="why">
         <div class="section-header reveal">
             <span class="section-num">01 / Why Us</span>
-            <h2 class="section-title">Why Choose BangaloreStudy?</h2>
+            <h2 class="section-title">Why Choose Us?</h2>
         </div>
         <div class="features-grid reveal">
             <div class="feature">
@@ -2917,12 +2922,12 @@
             margin: 0 auto;
         }
 
-        h1 {
+        h2 {
             color: var(--white);
             font-size: clamp(1.5rem, 4vw, 1.15rem);
             font-weight: 600;
-            line-height: 1.3;
-            margin-bottom: 0.5rem;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
             letter-spacing: -0.02em;
         }
 
@@ -3034,11 +3039,11 @@
         <div class="banner">
             <div class="content">
                 <div class="accent-line"></div>
-                <h1>
+                <h2>
                     Get Expert Guidance for the <span class="highlight">BAMS Counselling Process</span> and Stay Updated
                     on Counselling Dates,
                     Cut-Offs, Seat Allotment, and More!
-                </h1>
+                </h2>
                 <a href="#" class="cta-button">Speak to a Counsellor</a>
             </div>
         </div>
@@ -3266,10 +3271,11 @@
                 <div class="doc-item">NEET-UG Scorecard / Rank Letter</div>
                 <div class="doc-item">NEET-UG Application Form / Confirmation Page</div>
                 <div class="doc-item">Seat Allotment Letter</div>
-                <div class="doc-item">Valid Government-issued ID Proof</div>
+
             </div>
 
             <div class="docs-col">
+                <div class="doc-item">Valid Government-issued ID Proof</div>
                 <div class="doc-item">Character Certificate</div>
                 <div class="doc-item">Medical Fitness Certificate</div>
                 <div class="doc-item">Recent Passport-size Photographs</div>
@@ -3301,13 +3307,33 @@
         <div class="colleges-list reveal">
             <div class="college-row">
                 <div class="college-info">
-                    <img src="college-logo/KAHER’s Shri BM Kankanawadi Ayurveda Mahavidyalaya Post Graduate Studies and Research Centre.webp"
+                    <img src="college-logo/Sri Kalabyraveshwara Swamy Ayurvedic Medical College, Hospital and Research Centre (SKAMCH & RC).webp"
                         class="college-logo" alt="">
                     <div class="college-text">
-                        <div class="college-name">KAHER's Shri BM Kankanawadi Ayurveda Mahavidyalaya Post Graduate
-                            Studies and Research Centre
-                        </div>
-                        <div class="college-city"><i class="fas fa-map-marker-alt"></i> Belagavi</div>
+                        <div class="college-name">Sri Sri College of Ayurvedic Science and Research</div>
+                        <div class="college-city"><i class="fas fa-map-marker-alt"></i>Bangalore</div>
+                    </div>
+                </div>
+                <a href="#contact" class="btn-enquire">Enquire Now ></a>
+            </div>
+            <div class="college-row">
+                <div class="college-info">
+                    <img src="college-logo/Sushrutha Ayurvedic Medical College & Hospital.webp" class="college-logo"
+                        alt="">
+                    <div class="college-text">
+                        <div class="college-name">Sushrutha Ayurvedic Medical College & Hospital</div>
+                        <div class="college-city"><i class="fas fa-map-marker-alt"></i>Bangalore</div>
+                    </div>
+                </div>
+                <a href="#contact" class="btn-enquire">Enquire Now ></a>
+            </div>
+            <div class="college-row">
+                <div class="college-info">
+                    <img src="college-logo/Atreya Ayurvedic Medical College Hospital & Research Centre.webp"
+                        class="college-logo" alt="">
+                    <div class="college-text">
+                        <div class="college-name">Atreya Ayurvedic Medical College Hospital & Research Centre</div>
+                        <div class="college-city"><i class="fas fa-map-marker-alt"></i>Bangalore</div>
                     </div>
                 </div>
                 <a href="#contact" class="btn-enquire">Enquire Now ></a>
@@ -3325,6 +3351,41 @@
             </div>
             <div class="college-row">
                 <div class="college-info">
+                    <img src="college-logo/JSS Ayurveda Medical College.webp" class="college-logo" alt="">
+                    <div class="college-text">
+                        <div class="college-name">JSS Ayurveda Medical College</div>
+                        <div class="college-city"><i class="fas fa-map-marker-alt"></i>Mysore</div>
+                    </div>
+                </div>
+                <a href="#contact" class="btn-enquire">Enquire Now ></a>
+            </div>
+            <div class="college-row">
+                <div class="college-info">
+                    <img src="college-logo/Shri Kalidas Ayurvedic Medical College and Hospital.webp"
+                        class="college-logo" alt="">
+                    <div class="college-text">
+                        <div class="college-name">Shri Kalidas Ayurvedic Medical College and Hospital</div>
+                        <div class="college-city"><i class="fas fa-map-marker-alt"></i>Badami</div>
+                    </div>
+                </div>
+                <a href="#contact" class="btn-enquire">Enquire Now ></a>
+            </div>
+            <div class="college-row">
+                <div class="college-info">
+                    <img src="college-logo/KAHER’s Shri BM Kankanawadi Ayurveda Mahavidyalaya Post Graduate Studies and Research Centre.webp"
+                        class="college-logo" alt="">
+                    <div class="college-text">
+                        <div class="college-name">KAHER's Shri BM Kankanawadi Ayurveda Mahavidyalaya Post Graduate
+                            Studies and Research Centre
+                        </div>
+                        <div class="college-city"><i class="fas fa-map-marker-alt"></i> Belagavi</div>
+                    </div>
+                </div>
+                <a href="#contact" class="btn-enquire">Enquire Now ></a>
+            </div>
+
+            <div class="college-row">
+                <div class="college-info">
                     <img src="college-logo/Amrutha Ayurvedic Medical College (AAMC).webp" class="college-logo" alt="">
                     <div class="college-text">
                         <div class="college-name">Amrutha Ayurvedic Medical College (AAMC)</div>
@@ -3333,17 +3394,7 @@
                 </div>
                 <a href="#contact" class="btn-enquire">Enquire Now ></a>
             </div>
-            <div class="college-row">
-                <div class="college-info">
-                    <img src="college-logo/Sri Kalabyraveshwara Swamy Ayurvedic Medical College, Hospital and Research Centre (SKAMCH & RC).webp"
-                        class="college-logo" alt="">
-                    <div class="college-text">
-                        <div class="college-name">Sri Sri College of Ayurvedic Science and Research</div>
-                        <div class="college-city"><i class="fas fa-map-marker-alt"></i>Bangalore</div>
-                    </div>
-                </div>
-                <a href="#contact" class="btn-enquire">Enquire Now ></a>
-            </div>
+
             <div class="college-row">
                 <div class="college-info">
                     <img src="college-logo/Sharada Ayurveda Medical College and Hospital (SAMCH).webp"
@@ -3355,17 +3406,7 @@
                 </div>
                 <a href="#contact" class="btn-enquire">Enquire Now ></a>
             </div>
-            <div class="college-row">
-                <div class="college-info">
-                    <img src="college-logo/Sushrutha Ayurvedic Medical College & Hospital.webp" class="college-logo"
-                        alt="">
-                    <div class="college-text">
-                        <div class="college-name">Sushrutha Ayurvedic Medical College & Hospital</div>
-                        <div class="college-city"><i class="fas fa-map-marker-alt"></i>Bangalore</div>
-                    </div>
-                </div>
-                <a href="#contact" class="btn-enquire">Enquire Now ></a>
-            </div>
+
             <div class="college-row">
                 <div class="college-info">
                     <img src="college-logo/Ashwini Ayurvedic Medical College & Research Centre.webp"
@@ -3389,28 +3430,6 @@
             </div>
             <div class="college-row">
                 <div class="college-info">
-                    <img src="college-logo/Atreya Ayurvedic Medical College Hospital & Research Centre.webp"
-                        class="college-logo" alt="">
-                    <div class="college-text">
-                        <div class="college-name">Atreya Ayurvedic Medical College Hospital & Research Centre</div>
-                        <div class="college-city"><i class="fas fa-map-marker-alt"></i>Bangalore</div>
-                    </div>
-                </div>
-                <a href="#contact" class="btn-enquire">Enquire Now ></a>
-            </div>
-            <div class="college-row">
-                <div class="college-info">
-                    <img src="college-logo/Shri Kalidas Ayurvedic Medical College and Hospital.webp"
-                        class="college-logo" alt="">
-                    <div class="college-text">
-                        <div class="college-name">Shri Kalidas Ayurvedic Medical College and Hospital</div>
-                        <div class="college-city"><i class="fas fa-map-marker-alt"></i>Badami</div>
-                    </div>
-                </div>
-                <a href="#contact" class="btn-enquire">Enquire Now ></a>
-            </div>
-            <div class="college-row">
-                <div class="college-info">
                     <img src="college-logo/Indian Institute of Ayurvedic Medicine & Research.webp" class="college-logo"
                         alt="">
                     <div class="college-text">
@@ -3422,15 +3441,33 @@
             </div>
             <div class="college-row">
                 <div class="college-info">
-                    <img src="college-logo/JSS Ayurveda Medical College.webp" class="college-logo" alt="">
+                    <img src="college-logo/sscasrh-logo.png" class="college-logo"
+                        alt="">
                     <div class="college-text">
-                        <div class="college-name">JSS Ayurveda Medical College</div>
-                        <div class="college-city"><i class="fas fa-map-marker-alt"></i>Mysore</div>
+                        <div class="college-name">Sri Kalabyraveshwara Swamy Ayurvedic Medical College, Hospital and
+                            Research Centre (SKAMCH & RC)</div>
+                        <div class="college-city"><i class="fas fa-map-marker-alt"></i>Bangalore</div>
                     </div>
                 </div>
                 <a href="#contact" class="btn-enquire">Enquire Now ></a>
             </div>
         </div>
+        <div class="more-colleges">
+            <h4>And Many More..</h4>
+        </div>
+        <style>
+            .more-colleges {
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            .more-colleges h4 {
+                font-size: clamp(28px, 4vw, 22px);
+                font-weight: 600;
+                color: var(--green);
+                letter-spacing: -1px;
+            }
+        </style>
     </section>
 
     <!-- FAQ -->
@@ -3438,7 +3475,7 @@
         <div class="container-xl">
             <div class="row g-5 reveal">
                 <!-- LEFT: Big heading -->
-                <div class="col-lg-4 faq-left-col">
+                <div class="col-lg-5 faq-left-col">
                     <span class="faq-sec-label">07 / FAQ</span>
                     <h2 class="faq-big-title">
                         Frequently<br>
@@ -3449,7 +3486,7 @@
                     </h2>
                     <style>
                         .faq-big-title {
-                            font-size: clamp(2.5rem, 5vw, 4.5rem);
+                            font-size: clamp(2.5rem, 5vw, 4.9rem);
                             font-weight: 800;
                             line-height: 1.05;
                             letter-spacing: -1px;
@@ -3472,7 +3509,7 @@
                     </style>
                 </div>
                 <!-- RIGHT: Accordion -->
-                <div class="col-lg-8">
+                <div class="col-lg-7">
                     <div class="faq-item">
                         <div class="faq-q">
                             <h5>What is BAMS course duration?</h5>
